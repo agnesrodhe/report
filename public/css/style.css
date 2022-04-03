@@ -1,0 +1,31 @@
+html {
+    background-color: #ffffff;
+    color: black;
+    font-size: 100%;
+}
+
+.content {
+    margin-top: 5%;
+    min-height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content p {
+    max-width: 900px;
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+}
+
+.content img {
+    margin-bottom: 1.8rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 2px solid #FF768C;
+    text-align: center;
+}

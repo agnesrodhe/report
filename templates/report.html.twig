@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Report{% endblock %}
+
+{% block content %}
+{% apply markdown_to_html %}
+Report
+======
+Här kommer jag skriva redovisningstexter för alla kursmoment.
+
+{{ include('kmom01.markdown.twig')|markdown_to_html }}
+
+{% endapply %}
+
+
+
+{% endblock %}

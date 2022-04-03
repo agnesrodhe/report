@@ -1,0 +1,19 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<h1>Home</h1>
+
+<p class="important">
+    Hej och välkommen till min me-sida för den här kursen!
+</p>
+
+<p>
+    Jag läser sista läsperioden på första året på Webbprogrammering 120hp på BTH. Jag bor i Stockholm och förutom att plugga så gillar jag att dansa, promenera, fika och brodera. Det ska bli väldigt roligt att se vad den här kursen kommer att lära mig.
+</p>
+<img src="img/dansmove.jpg" width="400px" alt="lamp">
+
+<p><a href="{{ absolute_url("img/dansmove.jpg") }}">View the image</a></p>
+
+{% endblock %}

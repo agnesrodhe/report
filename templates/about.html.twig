@@ -1,0 +1,18 @@
+{% extends "base.html.twig" %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+<h1>About MVC</h1>
+<img src="img/dator.jpg" width="400" alt="dator">
+<p class="important">
+    Den här kursens förkortning är mvc, det egentliga namnet är Objektorienterade webbteknologier och i kursen kommer jag, om jag förstått det rätt, att lära mig objektorienterad PHP tillsammans med ramverket Symfony samt testning och att skriva snygg kod. 
+</p>
+
+<p>Det kommer också finnas möjligheter att använda kunskap från tidigare kurser inom ramen för den här kursen, till exempel från design och webtec.</p>
+
+<p><a href="{{ absolute_url("img/lamp.jpg") }}">Här hittar du kursens gitrepo</a></p>
+
+
+
+{% endblock %}
