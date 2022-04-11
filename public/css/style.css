@@ -30,3 +30,40 @@ footer {
     border-top: 2px solid #FF768C;
     text-align: center;
 }
+
+.card {
+    min-width: fit-content;
+    border: 1px solid black;
+    max-width: 50px;
+    text-align: center;
+}
+
+.red {
+    color: red;
+}
+
+.black {
+    color: black;
+}
+
+.color {
+    float: left;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.value {
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+.deckdiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.deckdiv h1 {
+    grid-column: 1/14;
+    justify-self: center;
+}

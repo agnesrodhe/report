@@ -1,10 +1,13 @@
 {% extends "base.html.twig" %}
 
-{% block title %}Cards{% endblock %}
+{% block title %}Card{% endblock %}
 
 {% block content %}
 <h1>Card</h1>
-
+<ul>
+    <li><a href="{{ url("showDeck") }}">Deck</a></li>
+    <li><a href="{{ url("shuffleDeck") }}">Shuffle</a></li>
+</ul>
 
 
 {% endblock %}
