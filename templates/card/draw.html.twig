@@ -4,7 +4,8 @@
 
 {% block content %}
 <div class="deckdiv"> 
-    {% if card != NULL %}
+    {% if cards != NULL %}
+    {% for card in cards %}
         {% set value = card.getValue() %}
         {% if card.getColor() == "♥" %}
         <div>    
@@ -29,9 +30,10 @@
         {% else %}
             <p class="card">{{ card.getColor() }} {{ value }} </p>
         {% endif %}
+    {% endfor %}
         <h4 class="card-left">Kort kvar: {{ left }}st</h4>
     {% else %}
-        <p>Korten är slut</p>
+        <p class="card-left">Korten är slut!</p>
     {% endif %}
 
 </div>

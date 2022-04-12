@@ -47,10 +47,15 @@ class Deck
         return $this->deck;
     }
 
-    public function draw(): array
+    public function draw(int $number = 1): array
     {
         shuffle($this->deck);
-        $cardDrawed = array_pop($this->deck);
-        return array($cardDrawed);
+        $cardDrawedArray = array();
+        for ($x = 0; $x < $number; $x++) {
+            $cardDrawed = array_pop($this->deck);
+            array_push($cardDrawedArray, $cardDrawed);
+        };
+
+        return $cardDrawedArray;
     }
 }

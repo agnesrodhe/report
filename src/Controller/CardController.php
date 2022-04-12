@@ -62,7 +62,34 @@ class CardController extends AbstractController
 
         $cardDrawed = $drawDeck->draw();
         $data = [
-            'card' => $cardDrawed[0],
+            'cards' => $cardDrawed,
+            'left' => count($drawDeck->getDeck()),
+        ];
+        $session->set("drawDeck", $drawDeck);
+
+        return $this->render('card/draw.html.twig', $data);
+    }
+
+        /**
+     * @Route(
+     *      "/card/deck/draw/{numberCards}",
+     *      name="draw-card-number",
+     *      methods={"GET","POST"}
+     * )
+     */
+    public function drawCardNumber(int $numberCards,
+        SessionInterface $session): Response
+    {
+        $drawDeck = $session->get("drawDeck") ?? new \App\Card\Deck();
+
+        if (count($drawDeck->getDeck()) >= $numberCards) {
+            $cardDrawed = $drawDeck->draw($numberCards); 
+        } else {
+            $cardDrawed = NULL;
+        }
+
+        $data = [
+            'cards' => $cardDrawed,
             'left' => count($drawDeck->getDeck()),
         ];
         $session->set("drawDeck", $drawDeck);
