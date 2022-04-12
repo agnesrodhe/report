@@ -67,3 +67,8 @@ footer {
     grid-column: 1/14;
     justify-self: center;
 }
+
+.card-left {
+    grid-column: 1/15;
+    grid-row: 2/2;
+}
