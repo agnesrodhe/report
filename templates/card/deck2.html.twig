@@ -7,8 +7,8 @@
     <h1>{{ title }}</h1>
     {% for card in deck %}
         {% if card == "🃟" %}
-            <div>    
-                <p class="card joker">{{ card }} </p>
+            <div class="joker">    
+                <p class="card">{{ card }} </p>
             </div>
         {% else %}
             {% set value = card.getValue() %}
