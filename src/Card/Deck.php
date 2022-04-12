@@ -6,7 +6,7 @@ use App\Card\Card;
 
 class Deck
 {
-    private $deck = array();
+    protected $deck = array();
 
     public function __construct($deck = null){
         if ($deck == null) {
@@ -33,7 +33,6 @@ class Deck
         } else {
             $this->deck = $deck;
         }
-
     }
 
     public function getDeck(): array

@@ -31,6 +31,19 @@ class CardController extends AbstractController
         return $this->render('card/deck.html.twig', $data);
     }
 
+    /**
+     * @Route("/card/deck2", name="showDeck2")
+     */
+    public function showDeck2(): Response
+    {
+        $deck = new \App\Card\DeckWith2Jokers();
+        $data = [
+            'title' => 'Deck with jokers',
+            'deck' => $deck->getDeck(),
+        ];
+        return $this->render('card/deck2.html.twig', $data);
+    }
+
         /**
      * @Route("/card/deck/shuffle", name="shuffleDeck")
      */
@@ -39,6 +52,7 @@ class CardController extends AbstractController
     ): Response
     {
         $session->remove("drawDeck");
+        $session->remove("dealDeck");
         $deck = new \App\Card\Deck();
 
         $data = [
@@ -70,7 +84,7 @@ class CardController extends AbstractController
         return $this->render('card/draw.html.twig', $data);
     }
 
-        /**
+    /**
      * @Route(
      *      "/card/deck/draw/{numberCards}",
      *      name="draw-card-number",
@@ -85,7 +99,7 @@ class CardController extends AbstractController
         if (count($drawDeck->getDeck()) >= $numberCards) {
             $cardDrawed = $drawDeck->draw($numberCards); 
         } else {
-            $cardDrawed = NULL;
+            $cardDrawed = $drawDeck->draw(count($drawDeck->getDeck())); 
         }
 
         $data = [
@@ -97,4 +111,39 @@ class CardController extends AbstractController
         return $this->render('card/draw.html.twig', $data);
     }
 
+    /**
+     * @Route(
+     *      "/card/deck/deal/{players}/{cards}",
+     *      name="deal-cards",
+     *      methods={"GET","POST"}
+     * )
+     */
+    public function dealCards(int $players, int $cards,
+        SessionInterface $session): Response
+    {
+        $playerArray = array();
+        for ($x = 1; $x <= $players; $x++) {
+            $player = new \App\Card\Player($x);
+            array_push($playerArray, $player);
+        };
+
+        $dealDeck = $session->get("dealDeck") ?? new \App\Card\Deck();
+        $counter = 0;
+        while($counter < $cards) {
+            foreach ($playerArray as $playerSingle) {
+                if (count($dealDeck->getDeck()) > 0) {
+                    $playerSingle->addToHand($dealDeck->draw()[0]);
+                };
+            };
+            $counter++;
+        };
+        $data = [
+            'players' => $playerArray,
+            'left' => count($dealDeck->getDeck()),
+        ];
+
+        $session->set("dealDeck", $dealDeck);
+
+        return $this->render('card/deal.html.twig', $data);
+    }
 }
