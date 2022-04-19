@@ -1,0 +1,15 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Game{% endblock %}
+
+{% block content %}
+<h1>Kortspelet 21</h1>
+
+<h4>Välkommen!</h4>
+<h5>På den här sidan kan du spela 21 enligt följande regler:</h5>
+<p>Spelet går ut på att du drar ett kort i taget och ska försöka komma så nära 21  som möjligt MEN om det sammanlagda värdet av alla kort mer än 21 så förlorar du. Du får välja att stanna när du vill och då kommer datorn att köra mot dig.</p>
+
+<h2>Tryck på knappen för att starta!</h2>
+
+<a href="{{ url("game-doc") }}">Dokumentation om spelet</a>
+{% endblock %}
