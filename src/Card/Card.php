@@ -4,14 +4,13 @@ namespace App\Card;
 
 class Card
 {
-    private $value;
-    private $color;
+    private string $value;
+    private string $color;
 
     public function __construct(string $cardValue, string $cardColor)
     {
         $this->value = $cardValue;
         $this->color = $cardColor;
-        // $this->picture = $cardPicture;
     }
 
     public function getColor(): string

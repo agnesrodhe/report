@@ -7,6 +7,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use App\Card\Deck;
+use App\Card\DeckWith2Jokers;
+use App\Card\Player;
 
 class CardController extends AbstractController
 {
@@ -23,7 +26,7 @@ class CardController extends AbstractController
      */
     public function showDeck(): Response
     {
-        $deck = new \App\Card\Deck();
+        $deck = new Deck();
         $data = [
             'title' => 'Deck',
             'deck' => $deck->getDeck(),
@@ -36,7 +39,7 @@ class CardController extends AbstractController
      */
     public function showDeck2(): Response
     {
-        $deck = new \App\Card\DeckWith2Jokers();
+        $deck = new DeckWith2Jokers();
         $data = [
             'title' => 'Deck with jokers',
             'deck' => $deck->getDeck(),
@@ -44,16 +47,15 @@ class CardController extends AbstractController
         return $this->render('card/deck2.html.twig', $data);
     }
 
-        /**
+    /**
      * @Route("/card/deck/shuffle", name="shuffleDeck")
      */
     public function shuffleDeck(
         SessionInterface $session
-    ): Response
-    {
+    ): Response {
         $session->remove("drawDeck");
         $session->remove("dealDeck");
-        $deck = new \App\Card\Deck();
+        $deck = new Deck();
 
         $data = [
             'title' => 'Deck',
@@ -70,9 +72,9 @@ class CardController extends AbstractController
      * )
      */
     public function drawCard(
-        SessionInterface $session): Response
-    {
-        $drawDeck = $session->get("drawDeck") ?? new \App\Card\Deck();
+        SessionInterface $session
+    ): Response {
+        $drawDeck = $session->get("drawDeck") ?? new Deck();
 
         $cardDrawed = $drawDeck->draw();
         $data = [
@@ -91,16 +93,17 @@ class CardController extends AbstractController
      *      methods={"GET","POST"}
      * )
      */
-    public function drawCardNumber(int $numberCards,
-        SessionInterface $session): Response
-    {
-        $drawDeck = $session->get("drawDeck") ?? new \App\Card\Deck();
+    public function drawCardNumber(
+        int $numberCards,
+        SessionInterface $session
+    ): Response {
+        $drawDeck = $session->get("drawDeck") ?? new Deck();
+        $numberToDraw = count($drawDeck->getDeck());
 
         if (count($drawDeck->getDeck()) >= $numberCards) {
-            $cardDrawed = $drawDeck->draw($numberCards); 
-        } else {
-            $cardDrawed = $drawDeck->draw(count($drawDeck->getDeck())); 
+            $numberToDraw = $numberCards;
         }
+        $cardDrawed = $drawDeck->draw($numberToDraw);
 
         $data = [
             'cards' => $cardDrawed,
@@ -118,18 +121,20 @@ class CardController extends AbstractController
      *      methods={"GET","POST"}
      * )
      */
-    public function dealCards(int $players, int $cards,
-        SessionInterface $session): Response
-    {
+    public function dealCards(
+        int $players,
+        int $cards,
+        SessionInterface $session
+    ): Response {
         $playerArray = array();
         for ($x = 1; $x <= $players; $x++) {
-            $player = new \App\Card\Player($x);
+            $player = new Player($x);
             array_push($playerArray, $player);
         };
 
-        $dealDeck = $session->get("dealDeck") ?? new \App\Card\Deck();
+        $dealDeck = $session->get("dealDeck") ?? new Deck();
         $counter = 0;
-        while($counter < $cards) {
+        while ($counter < $cards) {
             foreach ($playerArray as $playerSingle) {
                 if (count($dealDeck->getDeck()) > 0) {
                     $playerSingle->addToHand($dealDeck->draw()[0]);

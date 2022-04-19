@@ -4,7 +4,7 @@ namespace App\Card;
 
 class DeckWith2Jokers extends Deck
 {
-    private $joker = "🃟";
+    private string $joker = "🃟";
     public function __construct()
     {
         parent::__construct();

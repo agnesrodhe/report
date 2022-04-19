@@ -1,0 +1,20 @@
+#### Kmom02
+
+Kursmoment 2 har handlat om att bygga en kortlek med kort och ta hjälp av olika objektorienterade konstruktioner för att göra detta. 
+
+Arv är ”is a” konstruktion som innebär att man kan skapa en subklass till en basklass där det finns ett väldigt starkt band, subklassen kan inte existera utan basklassen. Till exempel har jag använt mig av arv i klassen DeckWith2Jokers och där ärvt från klassen Dock.
+
+Komposition är en ”has a” konstruktion som betyder att relationen inte är lika beroende av varandra men att man använder sig av antingen varandra eller en klass använder sig av den andra klassen. Jag har använt mig av komposition när jag till exempel har skapat klassen CardHand och då haft en stark koppling till klassen Card.
+
+Interface och trait har jag inte hunnit läsa på så mycket om och inte heller använt mig av den här veckan. Men som jag har förstått Trait så innebär det att en klass kan använda en trait och få tillgång till dens metoder och medlemsvariabler precis som i arv men skillnaden är att det går för en klass att ärva från mer än en trait och det är inte möjligt för en klass att ha arv från flera basklasser. Så som jag har förstått Interface är det lite som en mall för vad man kan förvänta sig. Ett interface innehåller ingen färdig kod för olika metoder men den innehåller ett skal för vad som ska finnas. Det gör det enklare att förstå och veta vilken funktion en klass skulle kunna ha.
+
+##### Berätta om din implementation från uppgiften. Hur löste du uppgiften, är du nöjd/missnöjd, vilken förbättringspotential ser du i din koden och dina klasser?
+
+Jag är väldigt nöjd att jag har lyckats komma fram till något som är i stil med kraven för uppgiften. Jag har gjort de filer som fanns som krav för uppgiften och i de fall där det har funnits tolkningsutrymme så har jag gjort egna beslut - till exempel exakt hur olika sidor skulle se ut och vilken navigation som finns på dem. För att lösa uppgiften har jag följt guiden, kollat på videogenomgångar använt var_dump() oerhört mycket, testat, googlat och frågat om hjälp. Jag tror absolut att koden skulle kunna se snyggare ut och jag skulle till exempel kunna använda mig av trait och interface, det har bara inte riktigt funnits tid och kunskap om det än men det ser jag som en förbättringspotential. 
+
+##### Berätta hur det kändes att modellera ett kortspel med flödesdiagram och psuedokod. Var det något som du tror stödjer dig i din problemlösning och tankearbete för att strukturera koden kring en applikation?
+
+Jag har inte gjort någon problemlösning och heller inte något flödesdiagram och psuedokod utan det tar jag i kmom03 för det var så man kunde göra om jag förstod uppgiften rätt. 
+
+##### Vilken är din TIL för detta kmom?
+Mitt TIL för det här kursmomentet är att när jag är i en klass och vill komma åt medlemsvariablerna i metoderna så behöver jag skriva $this-medlemsvariabel för att kunna använda den. Det var ett misstag som jag gjort flera gånger under veckan men som jag nu till slut har tagit med mig och lärt mig (förhoppningsvis).
