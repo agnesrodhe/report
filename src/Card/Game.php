@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Card;
+
 use App\Card\Player;
 use App\Card\Deck;
 
@@ -23,21 +24,26 @@ class Game
         return "[{$this->player1->getPlayerId()}]";
     }
 
-    public function getDeck(): array {
+    public function getDeck(): array
+    {
         return $this->deck;
     }
 
-    public function drawCardPlayer() {
+    public function drawCardPlayer()
+    {
         $card = $this->deck->draw();
         $this->player1->addToHand($card[0]);
     }
 
-    public function getHandPlayer(): array {
+    public function getHandPlayer(): array
+    {
         $hand = $this->player1->getHand();
-        return $hand->getCardHand();;
+        return $hand->getCardHand();
+        ;
     }
 
-    public function getHandBank(): array {
+    public function getHandBank(): array
+    {
         if (count($this->getSum()) < 2) {
             $card = $this->deck->draw();
             $this->bank->addToHand($card[0]);
@@ -47,10 +53,12 @@ class Game
             $this->bank->addToHand($card[0]);
         };
         $hand = $this->bank->getHand();
-        return $hand->getCardHand();;
+        return $hand->getCardHand();
+        ;
     }
 
-    public function setWinner() {
+    public function setWinner()
+    {
         $bankSum = $this->bank->getSum();
         $playerSum = $this->player1->getSum();
         if ($bankSum > $playerSum && $bankSum <= 21) {
@@ -58,7 +66,7 @@ class Game
         } elseif ($playerSum <= 21) {
             $this->winner = $this->player1;
         } elseif ($playerSum > 21 && $bankSum > 21) {
-            $this->winner = NULL;
+            $this->winner = null;
         };
     }
 
@@ -70,21 +78,20 @@ class Game
             $this->winner = $this->bank;
         };
         array_push($sumAll, $sumPlayer1);
-        if ($this->bank->getHand() != NULL) {
+        if ($this->bank->getHand() != null) {
             $sumBank = $this->bank->getSum();
             array_push($sumAll, $sumBank);
         };
         return $sumAll;
     }
 
-    public function getWinner(): string {
-        $winnerMessage;
-        if ($this->winner == NULL) {
+    public function getWinner(): string
+    {
+        $winnerMessage = "Du vann!";
+        if ($this->winner == null) {
             $winnerMessage = "Ingen har vunnit!";
         } elseif ($this->winner == $this->bank) {
             $winnerMessage = "Banken vann!";
-        } else {
-            $winnerMessage = "Du vann!";
         };
         return $winnerMessage;
     }
