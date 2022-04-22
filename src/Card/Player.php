@@ -38,8 +38,8 @@ class Player
         $arrayCardValues = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
         $sum = 0;
         foreach ($this->cards->getCardHand() as $card) {
-                $index = array_search($card->getValue(), $arrayCardValues);
-                $sum += $index + 1;
+            $index = array_search($card->getValue(), $arrayCardValues);
+            $sum += $index + 1;
         };
         $this->sum = $sum;
         return $this->sum;
