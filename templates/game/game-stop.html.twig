@@ -8,7 +8,7 @@
 </div>
 <div class="player game-board row">
     <div class="col-md-12">
-        <h5>Spelare 1</h5>
+        <h4>Spelare 1</h4>
     </div>
     {% for c in cardHand %}
     <div class="col-md-1">
@@ -22,14 +22,14 @@
     </div>
     {% endfor %}
     <div class="col-md-12">
-        <p>Totala summan: {{ sumPlayer }}</p>
+        <h5>Totala summan: {{ sumPlayer }}</h5>
     </div>
 </div>
 
 
 <div class="bank game-board row">
     <div class="col-md-12">
-        <h5>Banken</h5>
+        <h4>Banken</h4>
     </div>
     {% for c in cardHandBank %}
     <div class="col-md-1">
@@ -43,7 +43,7 @@
     </div>
     {% endfor %}
     <div class="col-md-12">
-        <p>Totala summan: {{ sumBank }}</p>
+        <h5>Totala summan: {{ sumBank }}</h5>
     </div>
 </div>
 <div>
