@@ -48,15 +48,43 @@ class GameController extends AbstractController
     public function gameDraw(SessionInterface $session): Response
     {
         $game = $session->get("game");
-        $game->drawCard();
-        $cardHand = $game->getHand();
+        $game->drawCardPlayer();
+        $cardHand = $game->getHandPlayer();
         $sum = $game->getSum();
         $data = [
-            'sum' => $sum[0],
+            'winner' => $game->getWinner(),
+            'sumPlayer' => $sum[0],
             'cardHand' => $cardHand
         ];
 
         $session->set("game", $game);
-        return $this->render('game/game-draw.html.twig', $data);
+
+        if ($sum[0] > 21) {
+            return $this->redirectToRoute('game-stop');
+        } else {
+            return $this->render('game/game-draw.html.twig', $data);
+        }
+    }
+
+    /**
+     * @Route("/game/stop", name="game-stop")
+     */
+    public function gameStop(SessionInterface $session): Response
+    {
+        $game = $session->get("game");
+        $cardHand = $game->getHandBank();
+        $cardHandPlayer = $game->getHandPlayer();
+        $sum = $game->getSum();
+        $game->setWinner();
+        $data = [
+            'winner' => $game->getWinner(),
+            'sumBank' => $sum[1],
+            'sumPlayer' => $sum[0],
+            'cardHandBank' => $cardHand,
+            'cardHand' => $cardHandPlayer
+        ];
+
+        $session->set("game", $game);
+        return $this->render('game/game-stop.html.twig', $data);
     }
 };

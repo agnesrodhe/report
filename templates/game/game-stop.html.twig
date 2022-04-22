@@ -3,7 +3,8 @@
 {% block title %}21{% endblock %}
 
 {% block content %}
-<h1>Kortspelet 21</h1>
+<h1>Kortspelet 21 - Avslutat</h1>
+<div>{{ winner }}</div>
 <div class="player game-board">
     <h5>Spelare 1</h5>
     {% for c in cardHand %}
@@ -15,21 +16,37 @@
         <p class="card black color">{{ c.getColor() }} </p>
         <p class="card value">{{ c.getValue() }} </p>
         {% endif %}
-    </div> 
+    </div>
     {% endfor %}
     <div>
         <p>Totala summan: {{ sumPlayer }}</p>
     </div>
-    <form action="{{ url("game-draw") }}">
-        <input type="submit" value="Dra ett till kort" />
-    </form>
-    <form action="{{ url("game-stop") }}">
-        <input type="submit" value="Stanna" />
-    </form>
 </div>
 
 
 <div class="bank game-board">
     <h5>Datorn</h5>
+    {% for c in cardHandBank %}
+    <div>
+        {% if c.getColor() == "♥" or c.getColor() == "♦" %}
+        <p class="card red color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% else %}
+        <p class="card black color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% endif %}
+    </div>
+    {% endfor %}
+    <div>
+        <p>Totala summan: {{ sumBank }}</p>
+    </div>
 </div>
+<div>
+    <form action="{{ url("game-start") }}">
+        <input type="submit" value="Spela igen" />
+    </form>
+</div>
+
+
+
 {% endblock %}
