@@ -4,10 +4,12 @@
 
 {% block content %}
 <h1>Kortspelet 21</h1>
-<div class="player game-board">
-    <h5>Spelare 1</h5>
+<div class="player game-board row">
+    <div class="col-md-12">
+        <h5>Spelare 1</h5>
+    </div>
     {% for c in cardHand %}
-    <div>
+    <div class="col-md-1">
         {% if c.getColor() == "♥" or c.getColor() == "♦" %}
         <p class="card red color">{{ c.getColor() }} </p>
         <p class="card value">{{ c.getValue() }} </p>
@@ -17,19 +19,19 @@
         {% endif %}
     </div> 
     {% endfor %}
-    <div>
+    <div class="col-md-12">
         <p>Totala summan: {{ sumPlayer }}</p>
     </div>
     <form action="{{ url("game-draw") }}">
-        <input type="submit" value="Dra ett till kort" />
+        <input type="submit" class="btn knapp" value="Dra ett till kort" />
     </form>
     <form action="{{ url("game-stop") }}">
-        <input type="submit" value="Stanna" />
+        <input type="submit" class="btn knapp" value="Stanna" />
     </form>
 </div>
 
 
-<div class="bank game-board">
+<div class="bank game-board row">
     <h5>Datorn</h5>
 </div>
 {% endblock %}
