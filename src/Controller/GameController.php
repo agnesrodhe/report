@@ -7,6 +7,9 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Session\SessionInterface;
+use App\Card\Game;
+use App\Card\Player;
+use App\Card\Deck;
 
 class GameController extends AbstractController
 {
@@ -24,5 +27,32 @@ class GameController extends AbstractController
     public function gameDoc(): Response
     {
         return $this->render('game/game-doc.html.twig');
+    }
+
+    /**
+     * @Route("/game/start", name="game-start")
+     */
+    public function gameStart(SessionInterface $session): Response
+    {
+        $game = $session->get("game") ?? new Game();
+
+        $session->set("game", $game);
+
+        return $this->render('game/game-start.html.twig');
+    }
+
+    /**
+     * @Route("/game/draw", name="game-draw")
+     */
+    public function gameDraw(SessionInterface $session): Response
+    {
+        $game = $session->get("game");
+        $card = $game->drawCard();
+        $cardHand = $game->getHand();
+        $data = [
+            'cardHand' => $cardHand,
+            'card' => $card[0]
+        ];
+        return $this->render('game/game-draw.html.twig', $data);
     }
 };

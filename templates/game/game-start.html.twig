@@ -1,0 +1,25 @@
+{% extends "base.html.twig" %}
+
+{% block title %}21{% endblock %}
+
+{% block content %}
+<h1>Kortspelet 21</h1>
+<div class="player game-board">
+    <h5>Spelare 1</h5>
+    {# {% if card %}
+    <div>    
+        <p class="card red color">{{ card.getColor() }} </p>
+        <p class="card value">{{ card.value() }} </p>
+    </div> #}
+    <form action="{{ url("game-draw") }}">
+        <input type="submit" value="Dra ett kort" />
+    </form>
+    <button>Stanna</button>
+</div>
+
+
+<div class="bank game-board">
+    <h5>Datorn</h5>
+</div>
+
+{% endblock %}

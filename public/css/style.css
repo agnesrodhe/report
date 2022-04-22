@@ -77,3 +77,9 @@ footer {
     color: black;
     font-size: 20px;
 }
+
+.game-board {
+    border: 2px solid black;
+    padding: 10px;
+    margin: 10px;
+}

@@ -1,0 +1,40 @@
+{% extends "base.html.twig" %}
+
+{% block title %}21{% endblock %}
+
+{% block content %}
+<h1>Kortspelet 21</h1>
+<div class="player game-board">
+    <h5>Spelare 1</h5>
+    <div>
+        {% if card.getColor() == "♥" or card.getColor() == "♦" %}
+        <p class="card red color">{{ card.getColor() }} </p>
+        <p class="card value">{{ card.getValue() }} </p>
+        {% else %}
+        <p class="card black color">{{ card.getColor() }} </p>
+        <p class="card value">{{ card.getValue() }} </p>
+        {% endif %}
+    </div>
+    {% for c in cardHand %}
+    <div>
+        {% if c.getColor() == "♥" or c.getColor() == "♦" %}
+        <p class="card red color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% else %}
+        <p class="card black color">{{ c.getColor() }} </p>
+        <p class="card value">{{ c.getValue() }} </p>
+        {% endif %}
+    </div> 
+    {% endfor %}
+    <form action="{{ url("game-draw") }}">
+        <input type="submit" value="Dra ett till kort" />
+    </form>
+    <button>Stanna</button>
+</div>
+
+
+<div class="bank game-board">
+    <h5>Datorn</h5>
+</div>
+
+{% endblock %}
