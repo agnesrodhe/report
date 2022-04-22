@@ -36,6 +36,7 @@ footer {
     border: 1px solid black;
     max-width: 50px;
     text-align: center;
+    background-color: white;
 }
 
 .red {
@@ -82,6 +83,7 @@ footer {
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 10px;
+    background-color: rgb(180, 204, 180);
 }
 
 .knapp {
