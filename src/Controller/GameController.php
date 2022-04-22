@@ -34,7 +34,8 @@ class GameController extends AbstractController
      */
     public function gameStart(SessionInterface $session): Response
     {
-        $game = $session->get("game") ?? new Game();
+        $session->remove("game");
+        $game = new Game();
 
         $session->set("game", $game);
 
@@ -47,12 +48,15 @@ class GameController extends AbstractController
     public function gameDraw(SessionInterface $session): Response
     {
         $game = $session->get("game");
-        $card = $game->drawCard();
+        $game->drawCard();
         $cardHand = $game->getHand();
+        $sum = $game->getSum();
         $data = [
-            'cardHand' => $cardHand,
-            'card' => $card[0]
+            'sum' => $sum[0],
+            'cardHand' => $cardHand
         ];
+
+        $session->set("game", $game);
         return $this->render('game/game-draw.html.twig', $data);
     }
 };

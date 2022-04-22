@@ -26,14 +26,28 @@ class Game
         return $this->deck;
     }
 
-    public function drawCard(): array {
+    public function drawCard() {
         $card = $this->deck->draw();
         $this->player1->addToHand($card[0]);
-        return $card;
     }
 
     public function getHand(): array {
         $hand = $this->player1->getHand();
         return $hand->getCardHand();;
+    }
+
+    public function getSum(): array
+    {
+        $sumAll = array();
+        $sumPlayer1 = $this->player1->getSum();
+        if ($sumPlayer1 > 21) {
+            $sumPlayer1 = false;
+        };
+        array_push($sumAll, $sumPlayer1);
+        if ($this->bank->getHand() != NULL) {
+            $sumBank = $this->bank->getSum();
+            array_push($sumAll, $sumBank);
+        };
+        return $sumAll;
     }
 }
