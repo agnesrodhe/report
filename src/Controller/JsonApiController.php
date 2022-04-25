@@ -7,7 +7,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\Routing\Annotation\Route;
 use App\Card\Deck;
 
-class CardControllerJson
+class JsonApiController
 {
     /**
      * @Route("/card/api/deck", name="json-api")
