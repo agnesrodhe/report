@@ -13,7 +13,7 @@ class CardHand
         array_push($this->cardHand, $card);
     }
 
-    public function getCardHand()
+    public function getCardHand(): array
     {
         return $this->cardHand;
     }

@@ -3,7 +3,7 @@ Search.appendIndex(
                 {
             "fqsen": "\\App\\Card\\Card",
             "name": "Card",
-            "summary": "",
+            "summary": "The\u0020class\u0020Card\u0020represents\u0020a\u0020playing\u0020card.",
             "url": "classes/App-Card-Card.html"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A__construct\u0028\u0029",
@@ -13,12 +13,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AgetColor\u0028\u0029",
             "name": "getColor",
-            "summary": "",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020color\u0020of\u0020the\u0020card\u0020as\u0020a\u0020string",
             "url": "classes/App-Card-Card.html#method_getColor"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003AgetValue\u0028\u0029",
             "name": "getValue",
-            "summary": "",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020value\u0020of\u0020the\u0020card\u0020as\u0020a\u0020string",
             "url": "classes/App-Card-Card.html#method_getValue"
         },                {
             "fqsen": "\\App\\Card\\Card\u003A\u003A\u0024value",
@@ -53,42 +53,42 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Deck",
             "name": "Deck",
-            "summary": "",
+            "summary": "The\u0020class\u0020Deck\u0020represents\u0020a\u0020deck\u0020of\u0020cards.",
             "url": "classes/App-Card-Deck.html"
         },                {
             "fqsen": "\\App\\Card\\Deck\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "If\u0020no\u0020arguments\u0020is\u0020sent\u0020in\u0020this\u0020constructor\u0020create\u0020an\u0020array\u0020with\u002052\u0020cards\nIf\u0020arguments\u0020is\u0020sent\u0020in,\u0020the\u0020deck\u0020is\u0020the\u0020argument.",
             "url": "classes/App-Card-Deck.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\Deck\u003A\u003AgetDeck\u0028\u0029",
             "name": "getDeck",
-            "summary": "",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020deck\u0020as\u0020an\u0020array",
             "url": "classes/App-Card-Deck.html#method_getDeck"
         },                {
             "fqsen": "\\App\\Card\\Deck\u003A\u003AshuffleDeck\u0028\u0029",
             "name": "shuffleDeck",
-            "summary": "",
+            "summary": "This\u0020function\u0020shuffle\u0020the\u0020deck\u0020and\u0020then\u0020return\u0020the\u0020deck\u0020as\u0020an\u0020array",
             "url": "classes/App-Card-Deck.html#method_shuffleDeck"
         },                {
             "fqsen": "\\App\\Card\\Deck\u003A\u003Adraw\u0028\u0029",
             "name": "draw",
-            "summary": "",
+            "summary": "This\u0020function\u0020shuffle\u0020the\u0020deck\u0020and\u0020then\u0020draws\u0020the\u0020amount\u0020of\u0020cards\u0020as\u0020the\u0020argument\u0020sent\u0020in\u0020says.",
             "url": "classes/App-Card-Deck.html#method_draw"
         },                {
             "fqsen": "\\App\\Card\\Deck\u003A\u003A\u0024deck",
             "name": "deck",
-            "summary": "",
+            "summary": "Deck\u0020parameter",
             "url": "classes/App-Card-Deck.html#property_deck"
         },                {
             "fqsen": "\\App\\Card\\DeckWith2Jokers",
             "name": "DeckWith2Jokers",
-            "summary": "",
+            "summary": "The\u0020class\u0020Deck\u0020represents\u0020a\u0020deck\u0020of\u0020cards.",
             "url": "classes/App-Card-DeckWith2Jokers.html"
         },                {
             "fqsen": "\\App\\Card\\DeckWith2Jokers\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "If\u0020no\u0020arguments\u0020is\u0020sent\u0020in\u0020this\u0020constructor\u0020create\u0020an\u0020array\u0020with\u002052\u0020cards\nIf\u0020arguments\u0020is\u0020sent\u0020in,\u0020the\u0020deck\u0020is\u0020the\u0020argument.",
             "url": "classes/App-Card-DeckWith2Jokers.html#method___construct"
         },                {
             "fqsen": "\\App\\Card\\DeckWith2Jokers\u003A\u003A\u0024joker",
@@ -108,7 +108,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003AgetDeck\u0028\u0029",
             "name": "getDeck",
-            "summary": "Return\u0020the\u0020deck\u0020as\u0020and\u0020array.",
+            "summary": "Return\u0020the\u0020deck\u0020as\u0020an\u0020object.",
             "url": "classes/App-Card-Game.html#method_getDeck"
         },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003AdrawCardPlayer\u0028\u0029",
@@ -123,7 +123,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003AgetHandBank\u0028\u0029",
             "name": "getHandBank",
-            "summary": "This\u0020function\u0020draws\u0020card\u0020by\u0020card\u0020and\u0020add\u0020to\u0020the\u0020bankplayer\u0020card\u0020hand\u0020until\u0020the\u0020sum\u0020is\u002017\u0020or\u0020more.\u0020Returns\u0020the\u0020card\u0020hand\u0020of\u0020the\u0020bankplayer.",
+            "summary": "This\u0020function\u0020draws\u0020card\u0020by\u0020card\u0020and\u0020add\u0020to\nthe\u0020bankplayer\u0020card\u0020hand\u0020until\u0020the\u0020sum\u0020is\u002017\u0020or\u0020more.\u0020Returns\u0020the\u0020card\u0020hand\u0020of\u0020the\u0020bankplayer.",
             "url": "classes/App-Card-Game.html#method_getHandBank"
         },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003AsetWinner\u0028\u0029",
@@ -163,7 +163,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Player",
             "name": "Player",
-            "summary": "",
+            "summary": "The\u0020class\u0020Player\u0020represents\u0020a\u0020player\u0020in\u0020a\u0020game.",
             "url": "classes/App-Card-Player.html"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A__construct\u0028\u0029",
@@ -173,37 +173,37 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AgetPlayerId\u0028\u0029",
             "name": "getPlayerId",
-            "summary": "",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020players\u0020id\u0020as\u0020an\u0020integer",
             "url": "classes/App-Card-Player.html#method_getPlayerId"
-        },                {
-            "fqsen": "\\App\\Card\\Player\u003A\u003AaddToHand\u0028\u0029",
-            "name": "addToHand",
-            "summary": "",
-            "url": "classes/App-Card-Player.html#method_addToHand"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AgetHand\u0028\u0029",
             "name": "getHand",
-            "summary": "",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020players\u0020cardhand\u0020as\u0020a\u0020CardHand\u002Dobject.",
             "url": "classes/App-Card-Player.html#method_getHand"
+        },                {
+            "fqsen": "\\App\\Card\\Player\u003A\u003AaddToHand\u0028\u0029",
+            "name": "addToHand",
+            "summary": "This\u0020function\u0020takes\u0020a\u0020Card\u0020as\u0020an\u0020argument\u0020and\u0020if\u0020the\u0020the\u0020private\u0020\u0024cards\u0020is\u0020empty\ncreates\u0020a\u0020cardHand\u002Dobject.\u0020Then\u0020the\u0020card\u0020is\u0020added\u0020to\u0020the\u0020players\u0020CardHand.",
+            "url": "classes/App-Card-Player.html#method_addToHand"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003AgetSum\u0028\u0029",
             "name": "getSum",
-            "summary": "",
+            "summary": "This\u0020function\u0020sum\u0020all\u0020the\u0020values\u0020of\u0020the\u0020cards\u0020in\u0020the\u0020cardhand\u0020and\u0020return\u0020the\u0020sum\u0020as\u0020an\u0020integer.",
             "url": "classes/App-Card-Player.html#method_getSum"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024playerId",
             "name": "playerId",
-            "summary": "",
+            "summary": "PlayerId\u0020parameter",
             "url": "classes/App-Card-Player.html#property_playerId"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024cards",
             "name": "cards",
-            "summary": "",
+            "summary": "Cards\u0020parameter",
             "url": "classes/App-Card-Player.html#property_cards"
         },                {
             "fqsen": "\\App\\Card\\Player\u003A\u003A\u0024sum",
             "name": "sum",
-            "summary": "",
+            "summary": "Sum\u0020parameter",
             "url": "classes/App-Card-Player.html#property_sum"
         },                {
             "fqsen": "\\App\\Controller\\CardController",
@@ -470,6 +470,81 @@ Search.appendIndex(
             "name": "Kernel",
             "summary": "",
             "url": "classes/App-Kernel.html"
+        },                {
+            "fqsen": "\\App\\Dice\\DiceTest",
+            "name": "DiceTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020Dice.",
+            "url": "classes/App-Dice-DiceTest.html"
+        },                {
+            "fqsen": "\\App\\Dice\\DiceTest\u003A\u003AtestCreateDice\u0028\u0029",
+            "name": "testCreateDice",
+            "summary": "Construct\u0020object\u0020and\u0020verify\u0020that\u0020the\u0020object\u0020has\u0020the\u0020expected\nproperties,\u0020use\u0020no\u0020arguments.",
+            "url": "classes/App-Dice-DiceTest.html#method_testCreateDice"
+        },                {
+            "fqsen": "\\App\\Card\\CardTest",
+            "name": "CardTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020Card.",
+            "url": "classes/App-Card-CardTest.html"
+        },                {
+            "fqsen": "\\App\\Card\\CardTest\u003A\u003AtestCreateCard\u0028\u0029",
+            "name": "testCreateCard",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020verify\u0020that\u0020it\u0020has\u0020the\u0020expected\u0020properties,\u0020with\u0020arguments.",
+            "url": "classes/App-Card-CardTest.html#method_testCreateCard"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTest",
+            "name": "DeckTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020Deck.",
+            "url": "classes/App-Card-DeckTest.html"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTest\u003A\u003AtestCreateDeckNoArguments\u0028\u0029",
+            "name": "testCreateDeckNoArguments",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020verify\u0020that\u0020it\u0020has\u0020the\u0020expected\u0020properties,\u0020no\u0020arguments.",
+            "url": "classes/App-Card-DeckTest.html#method_testCreateDeckNoArguments"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTest\u003A\u003AtestCreateDeckWithArguments\u0028\u0029",
+            "name": "testCreateDeckWithArguments",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020verify\u0020that\u0020it\u0020has\u0020the\u0020expected\u0020properties,\u0020with\u0020arguments.",
+            "url": "classes/App-Card-DeckTest.html#method_testCreateDeckWithArguments"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTest\u003A\u003AtestIfShuffled\u0028\u0029",
+            "name": "testIfShuffled",
+            "summary": "Test\u0020if\u0020deck\u0020get\u0020shuffled\u0020by\u0020checking\u0020if\u0020the\u0020three\u0020first\u0020cards\u0020is\u0020not\u0020the\u0020same\u0020in\u0020two\u0020decks.",
+            "url": "classes/App-Card-DeckTest.html#method_testIfShuffled"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTest\u003A\u003AtestDrawCardNoArguments\u0028\u0029",
+            "name": "testDrawCardNoArguments",
+            "summary": "Draw\u0020a\u0020card\u0020from\u0020the\u0020deck,\u0020check\u0020if\u0020return\u0020value\u0020is\u0020an\u0020array\u0020with\u0020one\u0020element,\u0020no\u0020arguments.",
+            "url": "classes/App-Card-DeckTest.html#method_testDrawCardNoArguments"
+        },                {
+            "fqsen": "\\App\\Card\\DeckTest\u003A\u003AtestDrawCardWithArguments\u0028\u0029",
+            "name": "testDrawCardWithArguments",
+            "summary": "Draw\u0020three\u0020card\u0020from\u0020the\u0020deck,\u0020check\u0020if\u0020return\u0020value\u0020is\u0020an\u0020array\u0020with\u0020three\u0020element,\u0020with\u0020arguments.",
+            "url": "classes/App-Card-DeckTest.html#method_testDrawCardWithArguments"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest",
+            "name": "PlayerTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020Player.",
+            "url": "classes/App-Card-PlayerTest.html"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest\u003A\u003AtestCreatePlayer\u0028\u0029",
+            "name": "testCreatePlayer",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020verify\u0020that\u0020it\u0020has\u0020the\u0020expected\u0020properties,\u0020with\u0020arguments",
+            "url": "classes/App-Card-PlayerTest.html#method_testCreatePlayer"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest\u003A\u003AtestGetEmptyHand\u0028\u0029",
+            "name": "testGetEmptyHand",
+            "summary": "Test\u0020getHand\u0020function\u0020if\u0020the\u0020hand\u0020is\u0020empty",
+            "url": "classes/App-Card-PlayerTest.html#method_testGetEmptyHand"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest\u003A\u003AtestAddCardNoCardHand\u0028\u0029",
+            "name": "testAddCardNoCardHand",
+            "summary": "Test\u0020to\u0020add\u0020a\u0020Card\u0020to\u0020players\u0020hand\u0020if\u0020\u0024cards\u0020is\u0020empty.",
+            "url": "classes/App-Card-PlayerTest.html#method_testAddCardNoCardHand"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest\u003A\u003AtestAddCardExistingCardHand\u0028\u0029",
+            "name": "testAddCardExistingCardHand",
+            "summary": "Test\u0020to\u0020add\u0020a\u0020Card\u0020to\u0020players\u0020hand\u0020if\u0020\u0024cards\u0020is\u0020not\u0020empty.",
+            "url": "classes/App-Card-PlayerTest.html#method_testAddCardExistingCardHand"
         },                {
             "fqsen": "\\",
             "name": "\\",

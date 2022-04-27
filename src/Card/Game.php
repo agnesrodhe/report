@@ -16,28 +16,28 @@ class Game
 {
     /**
      * Deck parameter
-     * 
+     *
      * @var Deck
      */
     private $deck;
 
     /**
      * Player1 parameter
-     * 
+     *
      * @var Player
      */
     private $player1;
 
     /**
      * Bank parameter
-     * 
+     *
      * @var Player
      */
     private $bank;
 
     /**
      * Winner parameter
-     * 
+     *
      * @var string
      */
     private $winner;
@@ -52,18 +52,10 @@ class Game
         $this->bank = new Player(2);
     }
 
-    // /**
-    //  * Return the 
-    //  */
-    // public function getPlayers(): string
-    // {
-    //     return "[{$this->player1->getPlayerId()}]";
-    // }
-
     /**
-     * Return the deck as and array.
+     * Return the deck as an object.
      */
-    public function getDeck(): array
+    public function getDeck(): Deck
     {
         return $this->deck;
     }
@@ -88,7 +80,8 @@ class Game
     }
 
     /**
-     * This function draws card by card and add to the bankplayer card hand until the sum is 17 or more. Returns the card hand of the bankplayer.
+     * This function draws card by card and add to
+     * the bankplayer card hand until the sum is 17 or more. Returns the card hand of the bankplayer.
      */
     public function getHandBank(): array
     {
@@ -113,11 +106,11 @@ class Game
         $bankSum = $this->bank->getSum();
         $playerSum = $this->player1->getSum();
         if ($bankSum > $playerSum && $bankSum <= 21) {
-            $this->winner = $this->bank;
+            $this->winner = "bank";
         } elseif ($playerSum <= 21) {
-            $this->winner = $this->player1;
+            $this->winner = "player1";
         } elseif ($playerSum > 21 && $bankSum > 21) {
-            $this->winner = null;
+            $this->winner = "ingen";
         };
     }
 
@@ -129,7 +122,7 @@ class Game
         $sumAll = array();
         $sumPlayer1 = $this->player1->getSum();
         if ($sumPlayer1 > 21) {
-            $this->winner = $this->bank;
+            $this->winner = "bank";
         };
         array_push($sumAll, $sumPlayer1);
         if ($this->bank->getHand() != null) {
@@ -145,9 +138,9 @@ class Game
     public function getWinner(): string
     {
         $winnerMessage = "Du vann!";
-        if ($this->winner == null) {
+        if ($this->winner == "ingen") {
             $winnerMessage = "Ingen har vunnit!";
-        } elseif ($this->winner == $this->bank) {
+        } elseif ($this->winner == "bank") {
             $winnerMessage = "Banken vann!";
         };
         return $winnerMessage;
