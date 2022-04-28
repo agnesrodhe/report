@@ -66,4 +66,34 @@ class PlayerTest extends TestCase
         $cardArray = $res->getCardHand();
         $this->assertCount(2, $cardArray);
     }
+
+    /**
+     * Test to get sum from an empty cardhand
+     */
+    public function testGetSumEmptyCardHand()
+    {
+        $player = new Player(1);
+        $res = $player->getSum();
+        $this->assertEquals($res, 0);
+    }
+
+    /**
+     * Test to get sum from a cardhand with two cards
+     */
+    public function testGetSumCardHandTwoCards()
+    {
+        $player = new Player(1);
+        $card = new Card("2", "♥");
+        $card2 = new Card("3", "♥");
+
+        $player->addToHand($card);
+        $player->addToHand($card2);
+        $res = $player->getHand();
+
+        $cardArray = $res->getCardHand();
+        $this->assertCount(2, $cardArray);
+
+        $res = $player->getSum();
+        $this->assertEquals($res, 5);
+    }
 }

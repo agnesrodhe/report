@@ -45,11 +45,11 @@ class Game
     /**
      * Create new instances of the variables deck, player1 and bank.
      */
-    public function __construct()
+    public function __construct(int $sumPlayer = 0, int $sumBank = 0)
     {
         $this->deck = new Deck();
-        $this->player1 = new Player(1);
-        $this->bank = new Player(2);
+        $this->player1 = new Player(1, $sumPlayer);
+        $this->bank = new Player(2, $sumBank);
     }
 
     /**
@@ -135,7 +135,7 @@ class Game
     /**
      * This function returns a winnermessage as a string.
      */
-    public function getWinner(): string
+    public function getWinnerMessage(): string
     {
         $winnerMessage = "Du vann!";
         if ($this->winner == "ingen") {
@@ -144,5 +144,13 @@ class Game
             $winnerMessage = "Banken vann!";
         };
         return $winnerMessage;
+    }
+
+    /**
+     * This function is to get winner
+     */
+    public function getWinner(): string
+    {
+        return $this->winner;
     }
 }

@@ -33,22 +33,22 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Card\\CardHand",
             "name": "CardHand",
-            "summary": "",
+            "summary": "The\u0020class\u0020Game\u0020represents\u0020a\u0020game\u0020of\u002021.",
             "url": "classes/App-Card-CardHand.html"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003AaddCard\u0028\u0029",
             "name": "addCard",
-            "summary": "",
+            "summary": "This\u0020function\u0020takes\u0020a\u0020card\u002Dobject\u0020as\u0020a\u0020parameter\u0020and\u0020add\u0020the\u0020card\u0020to\u0020the\u0020\u0024cardHand\u002Darray.",
             "url": "classes/App-Card-CardHand.html#method_addCard"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003AgetCardHand\u0028\u0029",
             "name": "getCardHand",
-            "summary": "",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020cardhand\u0020as\u0020an\u0020array.",
             "url": "classes/App-Card-CardHand.html#method_getCardHand"
         },                {
             "fqsen": "\\App\\Card\\CardHand\u003A\u003A\u0024cardHand",
             "name": "cardHand",
-            "summary": "",
+            "summary": "Card\u0020hand\u0020parameter",
             "url": "classes/App-Card-CardHand.html#property_cardHand"
         },                {
             "fqsen": "\\App\\Card\\Deck",
@@ -136,9 +136,14 @@ Search.appendIndex(
             "summary": "This\u0020function\u0020returns\u0020the\u0020sum\u0020of\u0020the\u0020cards\u0020for\u0020both\u0020the\u0020player1\u0020and\u0020the\u0020bankplayer\u0020as\u0020an\u0020array.",
             "url": "classes/App-Card-Game.html#method_getSum"
         },                {
+            "fqsen": "\\App\\Card\\Game\u003A\u003AgetWinnerMessage\u0028\u0029",
+            "name": "getWinnerMessage",
+            "summary": "This\u0020function\u0020returns\u0020a\u0020winnermessage\u0020as\u0020a\u0020string.",
+            "url": "classes/App-Card-Game.html#method_getWinnerMessage"
+        },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003AgetWinner\u0028\u0029",
             "name": "getWinner",
-            "summary": "This\u0020function\u0020returns\u0020a\u0020winnermessage\u0020as\u0020a\u0020string.",
+            "summary": "This\u0020function\u0020is\u0020to\u0020get\u0020winner",
             "url": "classes/App-Card-Game.html#method_getWinner"
         },                {
             "fqsen": "\\App\\Card\\Game\u003A\u003A\u0024deck",
@@ -481,6 +486,26 @@ Search.appendIndex(
             "summary": "Construct\u0020object\u0020and\u0020verify\u0020that\u0020the\u0020object\u0020has\u0020the\u0020expected\nproperties,\u0020use\u0020no\u0020arguments.",
             "url": "classes/App-Dice-DiceTest.html#method_testCreateDice"
         },                {
+            "fqsen": "\\App\\Card\\CardHandTest",
+            "name": "CardHandTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020CardHand.",
+            "url": "classes/App-Card-CardHandTest.html"
+        },                {
+            "fqsen": "\\App\\Card\\CardHandTest\u003A\u003AtestCreateCardHand\u0028\u0029",
+            "name": "testCreateCardHand",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020verify\u0020that\u0020it\u0020is\u0020of\u0020the\u0020expected\u0020class.",
+            "url": "classes/App-Card-CardHandTest.html#method_testCreateCardHand"
+        },                {
+            "fqsen": "\\App\\Card\\CardHandTest\u003A\u003AtestGetCardHandEmptyHand\u0028\u0029",
+            "name": "testGetCardHandEmptyHand",
+            "summary": "Test\u0020if\u0020the\u0020card\u0020hand\u0020returns\u0020an\u0020empty\u0020array\u0020if\u0020no\u0020cards\u0020has\u0020been\u0020added.",
+            "url": "classes/App-Card-CardHandTest.html#method_testGetCardHandEmptyHand"
+        },                {
+            "fqsen": "\\App\\Card\\CardHandTest\u003A\u003AtestGetCardHandWithCards\u0028\u0029",
+            "name": "testGetCardHandWithCards",
+            "summary": "Test\u0020if\u0020the\u0020card\u0020hand\u0020returns\u0020card\u0020hand\u0020as\u0020an\u0020array\u0020if\u0020two\u0020cards\u0020has\u0020been\u0020added.",
+            "url": "classes/App-Card-CardHandTest.html#method_testGetCardHandWithCards"
+        },                {
             "fqsen": "\\App\\Card\\CardTest",
             "name": "CardTest",
             "summary": "Test\u0020cases\u0020for\u0020class\u0020Card.",
@@ -521,6 +546,66 @@ Search.appendIndex(
             "summary": "Draw\u0020three\u0020card\u0020from\u0020the\u0020deck,\u0020check\u0020if\u0020return\u0020value\u0020is\u0020an\u0020array\u0020with\u0020three\u0020element,\u0020with\u0020arguments.",
             "url": "classes/App-Card-DeckTest.html#method_testDrawCardWithArguments"
         },                {
+            "fqsen": "\\App\\Card\\GameTest",
+            "name": "GameTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020Game.",
+            "url": "classes/App-Card-GameTest.html"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestCreateGameObject\u0028\u0029",
+            "name": "testCreateGameObject",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020verify\u0020that\u0020it\u0020has\u0020the\u0020expected\u0020properties,\u0020no\u0020arguments.",
+            "url": "classes/App-Card-GameTest.html#method_testCreateGameObject"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestDrawCardAndGetCardFromPlayer\u0028\u0029",
+            "name": "testDrawCardAndGetCardFromPlayer",
+            "summary": "Test\u0020to\u0020draw\u0020a\u0020card\u0020from\u0020player1\u0020and\u0020get\u0020the\u0020card.",
+            "url": "classes/App-Card-GameTest.html#method_testDrawCardAndGetCardFromPlayer"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestDrawAndGetCardFromBank\u0028\u0029",
+            "name": "testDrawAndGetCardFromBank",
+            "summary": "Test\u0020to\u0020draw\u0020cards\u0020from\u0020bank\u0020and\u0020get\u0020the\u0020cards\u0020if\u0020no\u0020cards\u0020has\u0020been\u0020drawn.",
+            "url": "classes/App-Card-GameTest.html#method_testDrawAndGetCardFromBank"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestSetWinnerToPlayer1\u0028\u0029",
+            "name": "testSetWinnerToPlayer1",
+            "summary": "Test\u0020set\u0020winner\u0020to\u0020player1",
+            "url": "classes/App-Card-GameTest.html#method_testSetWinnerToPlayer1"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestSetWinnerToBank\u0028\u0029",
+            "name": "testSetWinnerToBank",
+            "summary": "Test\u0020set\u0020winner\u0020to\u0020bank",
+            "url": "classes/App-Card-GameTest.html#method_testSetWinnerToBank"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestSetWinnerToNoOne\u0028\u0029",
+            "name": "testSetWinnerToNoOne",
+            "summary": "Test\u0020set\u0020winner\u0020to\u0020no\u0020one",
+            "url": "classes/App-Card-GameTest.html#method_testSetWinnerToNoOne"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestGetWinnerMessageNoWinner\u0028\u0029",
+            "name": "testGetWinnerMessageNoWinner",
+            "summary": "Test\u0020get\u0020winnermessage\u0020no\u0020winner",
+            "url": "classes/App-Card-GameTest.html#method_testGetWinnerMessageNoWinner"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestGetWinnerMessageBankWinner\u0028\u0029",
+            "name": "testGetWinnerMessageBankWinner",
+            "summary": "Test\u0020get\u0020winnermessage\u0020bank\u0020as\u0020winner",
+            "url": "classes/App-Card-GameTest.html#method_testGetWinnerMessageBankWinner"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestGetWinnerMessagePlayerWinner\u0028\u0029",
+            "name": "testGetWinnerMessagePlayerWinner",
+            "summary": "Test\u0020get\u0020winnermessage\u0020player\u0020as\u0020winner",
+            "url": "classes/App-Card-GameTest.html#method_testGetWinnerMessagePlayerWinner"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestGetSumPlayer1\u0028\u0029",
+            "name": "testGetSumPlayer1",
+            "summary": "Test\u0020get\u0020sum\u0020Player1",
+            "url": "classes/App-Card-GameTest.html#method_testGetSumPlayer1"
+        },                {
+            "fqsen": "\\App\\Card\\GameTest\u003A\u003AtestGetSumPlayer1AndBank\u0028\u0029",
+            "name": "testGetSumPlayer1AndBank",
+            "summary": "Test\u0020get\u0020sum\u0020Player1\u0020and\u0020Bank",
+            "url": "classes/App-Card-GameTest.html#method_testGetSumPlayer1AndBank"
+        },                {
             "fqsen": "\\App\\Card\\PlayerTest",
             "name": "PlayerTest",
             "summary": "Test\u0020cases\u0020for\u0020class\u0020Player.",
@@ -545,6 +630,16 @@ Search.appendIndex(
             "name": "testAddCardExistingCardHand",
             "summary": "Test\u0020to\u0020add\u0020a\u0020Card\u0020to\u0020players\u0020hand\u0020if\u0020\u0024cards\u0020is\u0020not\u0020empty.",
             "url": "classes/App-Card-PlayerTest.html#method_testAddCardExistingCardHand"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest\u003A\u003AtestGetSumEmptyCardHand\u0028\u0029",
+            "name": "testGetSumEmptyCardHand",
+            "summary": "Test\u0020to\u0020get\u0020sum\u0020from\u0020an\u0020empty\u0020cardhand",
+            "url": "classes/App-Card-PlayerTest.html#method_testGetSumEmptyCardHand"
+        },                {
+            "fqsen": "\\App\\Card\\PlayerTest\u003A\u003AtestGetSumCardHandTwoCards\u0028\u0029",
+            "name": "testGetSumCardHandTwoCards",
+            "summary": "Test\u0020to\u0020get\u0020sum\u0020from\u0020a\u0020cardhand\u0020with\u0020two\u0020cards",
+            "url": "classes/App-Card-PlayerTest.html#method_testGetSumCardHandTwoCards"
         },                {
             "fqsen": "\\",
             "name": "\\",

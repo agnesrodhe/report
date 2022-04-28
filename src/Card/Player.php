@@ -37,9 +37,10 @@ class Player
     /**
      * @param int $idPlayer     Set an id to a player
      */
-    public function __construct(int $idPlayer)
+    public function __construct(int $idPlayer, int $sum = 0)
     {
         $this->playerId = $idPlayer;
+        $this->sum = $sum;
     }
 
     /**
@@ -79,6 +80,10 @@ class Player
     {
         $arrayCardValues = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
         $sum = 0;
+        if ($this->cards == null) {
+            return $this->sum;
+        };
+
         foreach ($this->cards->getCardHand() as $card) {
             $index = array_search($card->getValue(), $arrayCardValues);
             $sum += $index + 1;
