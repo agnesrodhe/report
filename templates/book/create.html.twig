@@ -7,17 +7,27 @@
 <div class="container">
     <h1>Add book to Library</h1>
     <form action="{{ path("show") }}" method="post">
-<fieldset>
-    <label>Title</label>
-    <input type="text" name="title">
-    <label>Author</label>
-    <input type="text" name="author">
-    <label>ISBN</label>
-    <input type="text" name="isbn">
-    <label>Image</label>
-    <input type="text" name="image_url">
-    <input type="submit" value="Add">
-</fieldset>
+        <fieldset class="form-group">
+            <div>
+                <label class="margin">Title</label>
+                <input type="text" class="form-control" name="title">
+            </div>
+            <div>
+                <label class="margin">Author</label>
+                <input type="text" class="form-control" name="author">
+            </div>
+            <div>
+                <label class="margin">ISBN</label>
+                <input type="text" class="form-control" name="isbn">
+            </div>
+            <div>
+                <label class="margin">Image</label>
+                <input type="text" class="form-control" name="image_url">
+            </div>
+            <input type="submit"class="margin btn btn-success btn-lg btn-block" value="Add">
+        </fieldset>
+            </form>
+        </div>        
     </form>
 </div>
 {% endblock %}
