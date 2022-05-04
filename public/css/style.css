@@ -4,6 +4,10 @@ html {
     font-size: 100%;
 }
 
+.container {
+    margin-bottom: 30px;
+}
+
 .content {
     margin-top: 2%;
     min-height: 100%;
@@ -27,8 +31,9 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    border-top: 2px solid #FF768C;
+    background-color:#FF768C;
     text-align: center;
+    padding: 10px;
 }
 
 .card {
