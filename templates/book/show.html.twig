@@ -4,7 +4,7 @@
 
 {% block content %}
 <h1>Library - all books</h1>
-<div class="container books">
+<div class="books">
     {% for book in books %}
         <div class="book">
             <img src="{{ book.getImage() }}" alt="{{ book.getTitle() }}" width="200">

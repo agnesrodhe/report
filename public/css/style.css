@@ -104,7 +104,8 @@ footer {
 
 .single {
     display: flex;
-    background-color: #F2DDE1;
+    flex-wrap: wrap;
+    background-color: #ced4cf;
     padding: 10px;
 }
 
@@ -156,4 +157,10 @@ footer {
 
 .margin {
     margin-top: 10px;
+}
+
+.container h1 {
+    background-color: #ced4cf;
+    padding: 10px;
+    color: rgb(9, 8, 8);
 }
