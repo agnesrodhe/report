@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Show{% endblock %}
+{% block title %}{{ book.GetTitle() }}{% endblock %}
 {% block content %}
 <p><a href="{{ url("show_all_books") }}">← Back to all books</a></p>
 <div class="container single">
