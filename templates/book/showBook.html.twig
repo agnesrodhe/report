@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Show{% endblock %}
+{% block content %}
+<p><a href="{{ url("show_all_books") }}">← Back to all books</a></p>
+<div class="container single">
+    <img src="{{ book.getImage() }}" alt="{{ book.getTitle() }}" width="400">
+    <div class="oneBook">
+        <h2>{{ book.getTitle() }}</h2>
+        <h5>{{ book.getAuthor() }}</h5>
+        <p>ISBN: {{ book.getISBN() }}</p>
+        <span class="hovertext" data-hover="Delete this book">
+            <a href="{{ path('book_delete_by_id', {'id': book.getId()}) }}" class="symbol red">✘</a>
+        </span>
+        <span class="hovertext" data-hover="Update this book">
+            <a href="{{ path('update_book', {'id': book.getId()}) }}" class="symbol">✎</a>
+        </span>
+    </div>
+    </div>
+</div>
+{% endblock %}

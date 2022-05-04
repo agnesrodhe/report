@@ -89,3 +89,67 @@ footer {
 .knapp {
     margin-top: 10px;
 }
+
+.books {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.book {
+    border: 2px solid rgb(192, 190, 190);
+    margin: 10px;
+    margin-left: 0;
+    padding: 10px;
+}
+
+.single {
+    display: flex;
+    background-color: #F2DDE1;
+    padding: 10px;
+}
+
+.oneBook {
+    margin: 10px;
+    padding: 10px;
+    padding-top: 0;
+}
+
+.oneBook h2 {
+    margin-top: 0;
+}
+
+.symbol {
+    font-size: 25px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.symbol:hover {
+    text-decoration: none;
+    color:rgb(99, 73, 83);
+}
+
+.hovertext {
+    position: relative;
+}
+
+.hovertext:before {
+    content: attr(data-hover);
+    visibility: hidden;
+    opacity: 0;
+    width: 140px;
+    background-color: rgb(244, 240, 240);
+    color: rgb(30, 29, 29);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    transition: opacity 0.5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 110%;
+}
+.hovertext:hover:before {
+    opacity: 0.8;
+    visibility: visible;
+}
