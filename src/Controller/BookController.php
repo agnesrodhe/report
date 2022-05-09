@@ -26,7 +26,8 @@ class BookController extends AbstractController
      * @Route("/book/create", name="create_book")
      *
      */
-    public function createBook() {
+    public function createBook()
+    {
         return $this->render('book/create.html.twig');
     }
 
@@ -42,7 +43,7 @@ class BookController extends AbstractController
 
         $book = new Book();
         $book->setTitle($request->request->get('title'));
-        $book->setISBN($request->request->get('isbn'));
+        $book->setIsbn($request->request->get('isbn'));
         $book->setAuthor($request->request->get('author'));
         $book->setImage($request->request->get('image_url'));
 
@@ -70,15 +71,15 @@ class BookController extends AbstractController
     }
 
     /**
-     * @Route("/book/show/{id}", name="book_by_id")
+     * @Route("/book/show/{bookId}", name="book_by_id")
      * methods={GET}
      */
     public function showBookById(
         BookRepository $bookRepository,
-        int $id
+        int $bookId
     ): Response {
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         $data = [
             'book' => $book
@@ -88,21 +89,21 @@ class BookController extends AbstractController
     }
 
     /**
-     * @Route("/book/delete/{id}", name="book_delete_by_id")
+     * @Route("/book/delete/{bookId}", name="book_delete_by_id")
      * methods={"POST"}
      */
     public function deleteBookById(
         ManagerRegistry $doctrine,
         BookRepository $bookRepository,
-        int $id
+        int $bookId
     ): Response {
         $entityManager = $doctrine->getManager();
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         if (!$book) {
             throw $this->createNotFoundException(
-                'No book found for id '.$id
+                'No book found for id ' . $bookId
             );
         }
 
@@ -113,15 +114,15 @@ class BookController extends AbstractController
     }
 
     /**
-     * @Route("/book/updateBook/{id}", name="update_book")
+     * @Route("/book/updateBook/{bookId}", name="update_book")
      * methods={"GET"}
      */
     public function showUpdateBook(
         BookRepository $bookRepository,
-        int $id
+        int $bookId
     ): Response {
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         $data = [
             'book' => $book
@@ -131,27 +132,27 @@ class BookController extends AbstractController
     }
 
     /**
-     * @Route("/book/update/{id}", name="book_update_by_id")
+     * @Route("/book/update/{bookId}", name="book_update_by_id")
      * methods={"POST"}
      */
     public function updateBook(
         ManagerRegistry $doctrine,
         BookRepository $bookRepository,
         Request $request,
-        int $id
+        int $bookId
     ): Response {
         $entityManager = $doctrine->getManager();
         $book = $bookRepository
-            ->find($id);
+            ->find($bookId);
 
         if (!$book) {
             throw $this->createNotFoundException(
-                'No product found for id '.$id
+                'No product found for id ' . $bookId
             );
         }
 
         $book->setTitle($request->request->get('title'));
-        $book->setISBN($request->request->get('isbn'));
+        $book->setIsbn($request->request->get('isbn'));
         $book->setAuthor($request->request->get('author'));
         $book->setImage($request->request->get('image_url'));
         $entityManager->flush();

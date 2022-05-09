@@ -25,7 +25,7 @@ class Book
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $ISBN;
+    private $isbn;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -54,14 +54,14 @@ class Book
         return $this;
     }
 
-    public function getISBN(): ?string
+    public function getIsbn(): ?string
     {
-        return $this->ISBN;
+        return $this->isbn;
     }
 
-    public function setISBN(string $ISBN): self
+    public function setIsbn(string $isbn): self
     {
-        $this->ISBN = $ISBN;
+        $this->isbn = $isbn;
 
         return $this;
     }

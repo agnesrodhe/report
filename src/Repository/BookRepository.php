@@ -27,26 +27,50 @@ class BookRepository extends ServiceEntityRepository
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function add(Book $entity, bool $flush = true): void
+    public function add(Book $entity): void
     {
         $this->_em->persist($entity);
-        if ($flush) {
-            $this->_em->flush();
-        }
+        // if ($flush) {
+        //     $this->_em->flush();
+        // }
     }
 
     /**
      * @throws ORMException
      * @throws OptimisticLockException
      */
-    public function remove(Book $entity, bool $flush = true): void
+    public function remove(Book $entity): void
     {
         $this->_em->remove($entity);
-        if ($flush) {
-            $this->_em->flush();
-        }
+        // if ($flush) {
+        //     $this->_em->flush();
+        // }
     }
 
+
+    // /**
+    //  * @throws ORMException
+    //  * @throws OptimisticLockException
+    //  */
+    // public function add(Book $entity, bool $flush = true): void
+    // {
+    //     $this->_em->persist($entity);
+    //     if ($flush) {
+    //         $this->_em->flush();
+    //     }
+    // }
+
+    // /**
+    //  * @throws ORMException
+    //  * @throws OptimisticLockException
+    //  */
+    // public function remove(Book $entity, bool $flush = true): void
+    // {
+    //     $this->_em->remove($entity);
+    //     if ($flush) {
+    //         $this->_em->flush();
+    //     }
+    // }
     // /**
     //  * @return Book[] Returns an array of Book objects
     //  */
