@@ -10,10 +10,10 @@
         <h5>{{ book.getAuthor() }}</h5>
         <p>ISBN: {{ book.getISBN() }}</p>
         <span class="hovertext" data-hover="Delete this book">
-            <a href="{{ path('book_delete_by_id', {'id': book.getId()}) }}" class="symbol red">✘</a>
+            <a href="{{ path('book_delete_by_id', {'bookId': book.getId()}) }}" class="symbol red">✘</a>
         </span>
         <span class="hovertext" data-hover="Update this book">
-            <a href="{{ path('update_book', {'id': book.getId()}) }}" class="symbol">✎</a>
+            <a href="{{ path('update_book', {'bookId': book.getId()}) }}" class="symbol">✎</a>
         </span>
     </div>
     </div>

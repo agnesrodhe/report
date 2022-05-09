@@ -8,7 +8,7 @@
     {% for book in books %}
         <div class="book">
             <img src="{{ book.getImage() }}" alt="{{ book.getTitle() }}" width="200">
-            <h4><a href="{{ path('book_by_id', {'id': book.getId()}) }}">{{ book.getTitle() }}</a></h4>
+            <h4><a href="{{ path('book_by_id', {'bookId': book.getId()}) }}">{{ book.getTitle() }}</a></h4>
             <h5>{{ book.getAuthor() }}</h5>
             <p>ISBN: {{ book.getISBN() }}</p>
         </div>
