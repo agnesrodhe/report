@@ -49,7 +49,7 @@ class GameController extends AbstractController
         $cardHand = $game->getHandPlayer();
         $sum = $game->getSum();
         $data = [
-            'winner' => $game->getWinnerMessage(),
+            'winner' => $game->getWinner(),
             'sumPlayer' => $sum[0],
             'cardHand' => $cardHand
         ];
@@ -73,7 +73,7 @@ class GameController extends AbstractController
         $sum = $game->getSum();
         $game->setWinner();
         $data = [
-            'winner' => $game->getWinnerMessage(),
+            'winner' => $game->getWinner(),
             'sumBank' => $sum[1],
             'sumPlayer' => $sum[0],
             'cardHandBank' => $cardHand,

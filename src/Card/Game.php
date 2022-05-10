@@ -40,7 +40,7 @@ class Game
      *
      * @var string
      */
-    private $winner;
+    private $winner = "Ingen har vunnit!";
 
     /**
      * Create new instances of the variables deck, player1 and bank.
@@ -106,11 +106,11 @@ class Game
         $bankSum = $this->bank->getSum();
         $playerSum = $this->player1->getSum();
         if ($bankSum > $playerSum && $bankSum <= 21) {
-            $this->winner = "bank";
+            $this->winner = "Banken vann!";
         } elseif ($playerSum <= 21) {
-            $this->winner = "player1";
+            $this->winner = "Du vann!";
         } elseif ($playerSum > 21 && $bankSum > 21) {
-            $this->winner = "ingen";
+            $this->winner = "Ingen har vunnit!";
         };
     }
 
@@ -122,7 +122,7 @@ class Game
         $sumAll = array();
         $sumPlayer1 = $this->player1->getSum();
         if ($sumPlayer1 > 21) {
-            $this->winner = "bank";
+            $this->winner = "Banken vann!";
         };
         array_push($sumAll, $sumPlayer1);
         if ($this->bank->getHand() != null) {
@@ -130,20 +130,6 @@ class Game
             array_push($sumAll, $sumBank);
         };
         return $sumAll;
-    }
-
-    /**
-     * This function returns a winnermessage as a string.
-     */
-    public function getWinnerMessage(): string
-    {
-        $winnerMessage = "Du vann!";
-        if ($this->winner == "ingen") {
-            $winnerMessage = "Ingen har vunnit!";
-        } elseif ($this->winner == "bank") {
-            $winnerMessage = "Banken vann!";
-        };
-        return $winnerMessage;
     }
 
     /**

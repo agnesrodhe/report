@@ -5,17 +5,18 @@
 - Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
 - Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
 
-Jag kommer att försöka göra tre förbättringar utifrån vad jag har upptäckt i phpmetrics och scrutinizer. Först kommer jag att göra en analys på vad jag tror kommer hända efter att jag genomfört dem och därefter implementera förbättringarna samt analysera hur resultatet blev i phpmetrics och scrutinizer. De förbättringarna jag kommer göra är att minska komplexiteten i klassen Deck, skriva tester för klassen GameController samt att minska EC-coupling i klassen GameController.
+Jag kommer att försöka göra tre förbättringar utifrån vad jag har upptäckt i phpmetrics och scrutinizer. Först kommer jag att göra en analys på vad jag tror kommer hända efter att jag genomfört dem och därefter implementera förbättringarna samt analysera hur resultatet blev i phpmetrics och scrutinizer. De förbättringarna jag kommer göra är att minska komplexiteten i klassen Deck, minska komplexiteten i klassen Game samt att minska EC-coupling i klassen GameController.
 
 1. **Minska komplexiteten i Deck**
 ##### Innan
 Utifrån rapporterna om kodkvaliteten så kunde jag se att klassen Deck hade en komplexitet som jag tror skulle kunna minskas. Det jag har tänkte göra är att minska komplexiteten i konstruktorn, jag tror att den koden skulle kunna göras på ett enklare sätt och det tror jag kommer påverka värdet för klassen Decks komplexitet så att det blir lägre. 
 
 ##### Analys
+Jag ändrade koden i konstruktorn i Deck vilket gjorde att jag kunde byta ut if, elseif och elseif mot en foreach-loop. Det tog bort en del komplexitet. 
 
-2. **Öka Code Coverage i GameController**
+2. **Minska komplexiteten i Game**
 ##### Innan
-Det finns inga tester skrivna för GameController och därför tänker jag att jag ska skriva det. Det skulle öka code coverage från 24.6% till något högre. Jag väljer att göra det just i den klassen eftersom det är den enda av de jag valt att kolla lite extra på som faktiskt inte har några tester skrivna till sig.
+Det fanns alltså två klasser som jag ansåg hade lite för hög komplexitet och därför vill jag nu försöka att sänka den även i klassen Game. Det tänker jag göra genom att slå ihop vinnarmeddelandet med att setWinner. Det känns som onödig kod att ha och därför tänker jag förenkla för att förbättra och på det viset göra en bättre kodkvalitet.
 
 ##### Analys
 
