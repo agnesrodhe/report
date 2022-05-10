@@ -74,7 +74,7 @@ Jag väljer här att kolla på kod som hör till spelet på sidan dvs klasserna 
 
 Utifrån följande värden kan jag se att det inte är några akuta förändringar som behöver ske för att det ska göra någon stor skillnad. Jag har lagt till Maintainability index för att det ger en bild av just det, inget akut men kanske något kan återgärdas. Det är ett värde på hur väl koden kan underhållas, och det är ett intressant mätvärde tycker jag. 
 
-Det jag lägger märke till är Deck-klassen som har både AC och EC det vill säga både är beroende av andra klasser och är beroende för andra klasser men även en det högre skiktet av komplexitet. Jag går in och kikar på koden och ser att komplexiteten är som störst i konstruktorn. Jag vet att jag har varit inne och jobbat i den förut för att få bort en else-sats. Jag har en idé om att jag skulle kunna göra den med en mindre komplexitet i ett förbättringsstadie.
+Det jag lägger märke till är Deck-klassen som har både AC och EC det vill säga både är beroende av andra klasser och är beroende för andra klasser och det även i det högre skiktet av komplexitet. Jag går in och kikar på koden och ser att komplexiteten är som störst i konstruktorn. Jag vet att jag har varit inne och jobbat i den förut för att få bort en else-sats. Jag har en idé om att jag skulle kunna göra den med en mindre komplexitet i ett förbättringsstadie.
 
 Jag fortsätter analysera och ser att även i Game-klassen så finns en hög komplexitet. Därför går jag in och kikar, eventuellt skulle det gå att förändra lite i funktionerna där för att minska komplexiteten. I GameController så är EC 5, det går att ta bort en import av Deck och Player eftersom dessa inte används i klassen utan ligger kvar från förut.
 
