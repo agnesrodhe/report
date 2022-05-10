@@ -54,7 +54,7 @@ class GameTest extends TestCase
 
         $game->setWinner();
         $res = $game->getWinner();
-        $this->assertEquals("player1", $res);
+        $this->assertEquals("Du vann!", $res);
     }
 
     /**
@@ -67,7 +67,7 @@ class GameTest extends TestCase
 
         $game->setWinner();
         $res = $game->getWinner();
-        $this->assertEquals("bank", $res);
+        $this->assertEquals("Banken vann!", $res);
     }
 
     /**
@@ -80,7 +80,7 @@ class GameTest extends TestCase
 
         $game->setWinner();
         $res = $game->getWinner();
-        $this->assertEquals("ingen", $res);
+        $this->assertEquals("Ingen har vunnit!", $res);
     }
 
     /**
