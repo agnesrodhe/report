@@ -84,45 +84,6 @@ class GameTest extends TestCase
     }
 
     /**
-     * Test get winnermessage no winner
-     */
-    public function testGetWinnerMessageNoWinner()
-    {
-        $game = new Game(24, 26);
-        $this->assertInstanceOf("\App\Card\Game", $game);
-
-        $game->setWinner();
-        $res = $game->getWinnerMessage();
-        $this->assertEquals("Ingen har vunnit!", $res);
-    }
-
-    /**
-     * Test get winnermessage bank as winner
-     */
-    public function testGetWinnerMessageBankWinner()
-    {
-        $game = new Game(18, 20);
-        $this->assertInstanceOf("\App\Card\Game", $game);
-
-        $game->setWinner();
-        $res = $game->getWinnerMessage();
-        $this->assertEquals("Banken vann!", $res);
-    }
-
-    /**
-     * Test get winnermessage player as winner
-     */
-    public function testGetWinnerMessagePlayerWinner()
-    {
-        $game = new Game(18, 17);
-        $this->assertInstanceOf("\App\Card\Game", $game);
-
-        $game->setWinner();
-        $res = $game->getWinnerMessage();
-        $this->assertEquals("Du vann!", $res);
-    }
-
-    /**
      * Test get sum Player1
      */
     public function testGetSumPlayer1()
