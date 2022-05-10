@@ -1,14 +1,27 @@
 #### Förbättringar
 
-
 - Börja med att skriva om förbättringarna, vad du tänker göra, varför du väljer dem och hur du tror det kommer påverka mätvärdena för kvalitet.
 - Implementera sedan förbättringarna.
 - Analysera därefter rapporterna från phpmetrics och Scrutinizer och notera de nya mätvärdena.
 - Gör det tydligt hur mätvärdena såg ut innan och efter dina förbättringar.
 
+Jag kommer att försöka göra tre förbättringar utifrån vad jag har upptäckt i phpmetrics och scrutinizer. Först kommer jag att göra en analys på vad jag tror kommer hända efter att jag genomfört dem och därefter implementera förbättringarna samt analysera hur resultatet blev i phpmetrics och scrutinizer. De förbättringarna jag kommer göra är att minska komplexiteten i klassen Deck, skriva tester för klassen GameController samt att minska EC-coupling i klassen GameController.
 
-1.
+1. **Minska komplexiteten i Deck**
+##### Innan
+Utifrån rapporterna om kodkvaliteten så kunde jag se att klassen Deck hade en komplexitet som jag tror skulle kunna minskas. Det jag har tänkte göra är att minska komplexiteten i konstruktorn, jag tror att den koden skulle kunna göras på ett enklare sätt och det tror jag kommer påverka värdet för klassen Decks komplexitet så att det blir lägre. 
 
-2.
+##### Analys
 
-3.
+2. **Öka Code Coverage i GameController**
+##### Innan
+Det finns inga tester skrivna för GameController och därför tänker jag att jag ska skriva det. Det skulle öka code coverage från 24.6% till något högre. Jag väljer att göra det just i den klassen eftersom det är den enda av de jag valt att kolla lite extra på som faktiskt inte har några tester skrivna till sig.
+
+##### Analys
+
+3. **Minska EC-coupling i GameController**
+##### Innan
+I GameController finns många couplings både AC och EC, det vill säga att klassen är beroende och har beroenden till sig. Jag vill försöka minska på EC genom att ta bort kopplingar som inte används. Det kommer att förändra coupling-värdet i phpmetrics och eventuellt göra klassens Maintainability index högre. 
+
+##### Analys
+Skillnaden i phpmetrics efter att jag bara gjort det här var näst intill obefintlig. Jag tog bort importer i GameController, tre stycken. Men jag kan inte se att det påverkade resultatet på något vis. Först hade Maintainability Index ökat något till 82.56 från 81.26 men när jag körde composer phpmetrics en gång till så var det tillbaka igen. Det här tolkar jag som att mitt öga för vad som var en förbättring inte var det. Det som dock hände var att jag fick städat i koden, jag tog bort kodrader som inte används. Vilket ju borde synas på size. Men det kan jag inte se, inte i phpmetrics. 
