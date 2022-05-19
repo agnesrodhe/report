@@ -37,12 +37,12 @@ class ChartDk
      * @var array The data from age 45-54
      */
     private $dataset45 = [];
-    
+
     /**
      * @var array The data from age 55-64
      */
     private $dataset55 = [];
-    
+
     /**
      * @var array The data from age 65-74
      */
@@ -65,8 +65,8 @@ class ChartDk
     }
 
     /**
-     * @param $chart        The chart that the data will be connected with 
-     * 
+     * @param $chart        The chart that the data will be connected with
+     *
      * This function set the data to the chart created in the controller
      */
     public function setChart($chart)
@@ -126,7 +126,8 @@ class ChartDk
     /**
      * This function returns the labels from the data
      */
-    public function getLabels(): array {
+    public function getLabels(): array
+    {
         return $this->labels;
     }
 }

@@ -41,8 +41,8 @@ class ChartM2
     }
 
     /**
-     * @param $chart        The chart that the data will be connected with 
-     * 
+     * @param $chart        The chart that the data will be connected with
+     *
      * This function set the data to the chart created in the controller
      */
     public function setChart($chart)
