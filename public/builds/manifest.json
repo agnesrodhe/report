@@ -1,0 +1,6 @@
+{
+  "builds/app.css": "/builds/app.css",
+  "builds/app.js": "/builds/app.js",
+  "builds/runtime.js": "/builds/runtime.js",
+  "builds/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_chart_js_auto_auto_es-f1def6.js": "/builds/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_chart_js_auto_auto_es-f1def6.js"
+}

@@ -40,27 +40,4 @@ class ReportController extends AbstractController
     {
         return $this->render('metrics.html.twig');
     }
-
-    // /**
-    //  * @Route("/api/lucky/number, name="lucky-number")
-    //  */
-    // public function number(): Response
-    // {
-    //     $number = random_int(0, 100);
-
-    //     $data = [
-    //         'message' => 'Welcome to the lucky number API',
-    //         'lucky-number' => $number
-    //     ];
-
-    //     return new JsonResponse($data);
-    // }
-
-    // /**
-    //  * @Route("/dev/debug", name="debug")
-    //  */
-    // public function debug(): Response
-    // {
-    //     return $this->render('debug.html.twig');
-    // }
 }

@@ -1,0 +1,14 @@
+{
+  "entrypoints": {
+    "app": {
+      "js": [
+        "https://www.student.bth.se/~agro21/dbwebb-kurser/mvc/me/report/public/builds/runtime.js",
+        "https://www.student.bth.se/~agro21/dbwebb-kurser/mvc/me/report/public/builds/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_chart_js_auto_auto_es-f1def6.js",
+        "https://www.student.bth.se/~agro21/dbwebb-kurser/mvc/me/report/public/builds/app.js"
+      ],
+      "css": [
+        "https://www.student.bth.se/~agro21/dbwebb-kurser/mvc/me/report/public/builds/app.css"
+      ]
+    }
+  }
+}

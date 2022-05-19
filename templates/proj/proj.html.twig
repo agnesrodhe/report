@@ -1,0 +1,16 @@
+{% extends "proj/baseProj.html.twig" %}
+
+{% block content %}
+{# <div> #}
+    {# {% for m in m1 %}
+        <div>
+            <h5>{{ m.getFlickor() }}</h5>
+        </div>
+    {% endfor %} #}
+    {# {{ render_chart(chart) }} #}
+    {# <p>{{ chart1 }}</p> #}
+    {{ render_chart(chart1, {'class': 'my-chart'}) }}
+    {{ render_chart(chart2, {'class': 'my-chart'}) }}
+    {{ render_chart(chart3, {'class': 'my-chart'}) }}
+{# </div> #}
+{% endblock %}

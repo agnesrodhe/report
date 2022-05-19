@@ -60,7 +60,6 @@ class BookController extends AbstractController
     public function showBooks(
         BookRepository $bookRepository
     ): Response {
-
         $books = $bookRepository
             ->findAll();
         $data = [
