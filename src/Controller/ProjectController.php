@@ -68,4 +68,12 @@ class ProjectController extends AbstractController
     {
         return $this->render('proj/aboutProj.html.twig');
     }
+
+    /**
+     * @Route("/proj/reset", name="reset-proj")
+     */
+    public function resetProj(): Response
+    {
+        return $this->render('proj/aboutProj.html.twig');
+    }
 }
