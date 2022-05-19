@@ -54,28 +54,12 @@ class ProjectController extends AbstractController
         $data = [
             'chart1' => $chartM1,
             'chart2' => $chartM2,
-            'chart3' => $chartDk
+            'chart3' => $chartDk,
+            'labels3' => $chart3->getLabels()
         ];
 
         return $this->render('proj/proj.html.twig', $data);
     }
-
-    // /**
-    //  * @Route("/proj/show", name="proj-show"),
-    //  * methods={GET}
-    //  */
-    // public function show(
-    //     Mobbning1Repository $m1Repository
-    // ): Response {
-
-    //     $m1 = $m1Repository
-    //         ->findAll();
-    //     $data = [
-    //         'm1' => $m1
-    //     ];
-
-    //     return $this->render('proj/projshow.html.twig', $data);
-    // }
 
     /**
      * @Route("/proj/about", name="about-proj")

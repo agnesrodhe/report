@@ -1,16 +1,59 @@
 {% extends "proj/baseProj.html.twig" %}
 
 {% block content %}
-{# <div> #}
-    {# {% for m in m1 %}
-        <div>
-            <h5>{{ m.getFlickor() }}</h5>
-        </div>
-    {% endfor %} #}
-    {# {{ render_chart(chart) }} #}
-    {# <p>{{ chart1 }}</p> #}
-    {{ render_chart(chart1, {'class': 'my-chart'}) }}
-    {{ render_chart(chart2, {'class': 'my-chart'}) }}
-    {{ render_chart(chart3, {'class': 'my-chart'}) }}
-{# </div> #}
+<div class="container">
+        <h1 class="rubrik">God utbildning för alla</h1>
+        <h3 class="underrubrik">-Mål 4</h3>
+    <div class="text1">
+        <p>Det globala målet nummer 4 handlar om att säkerställa en inkluderande och likvärdig utbildning av god kvalitet och främja livslångt lärande för alla.</p>
+    </div>
+    <div class="text2">
+        <p>Utbildade medborgare gör samhället mer demokratiskt och det stärker även välstånd, hälsa och jämställdhet.</p>
+    </div>
+    <div class="citat1">
+        <cite>Utbildning är nyckeln till välstånd och öppnar en värld av möjligheter som gör det möjligt för var och en av oss att bidra till ett hållbart samhälle. </cite><a href="https://www.globalamalen.se/om-globala-malen/mal-4-god-utbildning-alla/">(globalamalen.se)</a>
+    </div>
+    <div class="image">
+        <img src="img/education.jpg" alt="education">
+    </div>
+    <div class="rubrik2">
+        <h3>Trygga utbildningsmiljöer</h3>
+    </div>
+    <div class="text3">
+        <p>Ett av delmålen är att ha inkluderande och trygga utbildningsmiljöer. Andelen elever som upplevt mobbning någon gång under de senaste månaderna har mellan 2014 – 2018 ökat med 6.8% och elever som upplevt mobbning 2-3 gånger i månaden eller fler har ökat med 3.1% inom samma tidsperiod.</p>
+    </div>
+    <div class="citat2">
+        <cite>– Mobbningen har ökat i Sverige de senaste åren och vi har halkat efter från att ha varit ett föregångsland. Som det ser ut nu lever inte Sverige upp till barnkonventionen och barns rättigheter till en värld fri från våld, säger Maria Loodberg, sakkunnig på Friends.</cite>
+    </div>
+    <div class="diagram1">
+        <h4>Elever som upplevt mobbing de senaste månaderna, genomsnitt för 11-, 13- och 15-åringar, i procent.</h4>
+        {{ render_chart(chart1, {'class': 'my-chart'}) }}
+        <p>Källa: Skolbarns hälsovanor, Folkhälsomyndigheten.</p>
+    </div>
+    <div class="diagram2">
+        <h4>Elever som upplevt mobbning 2–3 gånger i månaden eller oftare under de senaste månaderna, genomsnittet för 11-,13-, och 15-åringar, i procent.</h4>
+        {{ render_chart(chart2, {'class': 'my-chart'}) }}
+        <p>Källa: Skolbarns hälsovanor, Folkhälsomyndigheten.</p>
+    </div>
+    <div class="rubrik3">
+        <h3>Öka antalet personer med färdigheter för ekonomisk trygghet</h3>
+    </div>
+    <div class="text4">
+        <p>Idag lever vi i ett samhälle där den digitala världen är en stor del av hur lever, på gott och ont. Det kräver därför att befolkningen har kunskap och färdigheter för att ha möjlighet att navigera i det digitala samhället. Som ett delmål i målet med god utbildning för alla finns att öka antal personer med relevanta färdigheter och ett exempel på sådana är just digitala färdigheter.</p>
+        <p>Det finns stor skillnad inom befolkningen kring vilka som har använt sig av olika digitala färdigheter (från 2017). Den stora skillnaden ligger främst i ålder, tittar vi till exempel på hur stor andel av befolkningen som har flyttat filer från dator till andra enheter så skiljer det 46% mellan åldersgrupperna 25-34 år samt 65-74 år, där de yngre har fler som använt den digitala färdigheten.</p>
+    </div>
+    <div class="diagram3">
+        <h4>Digitala färdigheter - Andel personer i åldern 16–74. År 2017</h4>
+        {{ render_chart(chart3, {'class': 'my-chart'}) }}
+        <p>Källa: Befolkningens IT-användning, SCB</p>
+    </div>
+    <div class="labels">
+        <ol>
+            {% for label in labels3 %}
+            <li>{{ label }}</li>
+            {% endfor %}
+        </ol>
+    </div>
+</div>
+
 {% endblock %}

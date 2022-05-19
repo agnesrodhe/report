@@ -1,21 +1,36 @@
 <?php
 
 /**
- * This file contains the class Game and is written by me, Agnes Rodhe.
+ * This file contains the class ChartM1 and is written by me, Agnes Rodhe.
  */
 
 namespace App\Proj;
 
 use App\Repository\Mobbning1Repository;
 
+/**
+ * The class ChartM1 represents a chart with data from the database-table mobbning1
+ */
 class ChartM1
 {
+    /**
+     * @var array The labels of the chart
+     */
     private $labels = [];
 
+    /**
+     * @var array The data for the girls
+     */
     private $datasetsF = [];
 
+    /**
+     * @var array The data for the boys
+     */
     private $datasetsP = [];
 
+    /**
+     * @param array $repo       The data as an array
+     */
     public function __construct($repo)
     {
         foreach ($repo as $data) {
@@ -25,6 +40,11 @@ class ChartM1
         }
     }
 
+    /**
+     * @param $chart        The chart that the data will be connected with 
+     * 
+     * This function set the data to the chart created in the controller
+     */
     public function setChart($chart)
     {
         $chart->setData([
@@ -32,8 +52,8 @@ class ChartM1
             'datasets' => [
                 [
                     'label' => 'Flickor',
-                    'backgroundColor' => 'rgb(5, 99, 132)',
-                    'borderColor' => 'rgb(5, 99, 132)',
+                    'backgroundColor' => '#F4D45F',
+                    'borderColor' => '#F4D45F',
                     'data' => $this->datasetsF,
                 ],
                 [
