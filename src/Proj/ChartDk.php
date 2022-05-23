@@ -6,7 +6,7 @@
 
 namespace App\Proj;
 
-use App\Repository\Mobbning1Repository;
+use App\Entity\DigitalKnowledge;
 
 /**
  * The class ChartDk represents a chart with data from the database-table digital_knowledge
@@ -51,16 +51,18 @@ class ChartDk
     /**
      * @param array $repo       The data as an array
      */
-    public function __construct(array $repo)
+    public function __construct(array $repo = [])
     {
-        foreach ($repo as $data) {
-            $this->labels[] = $data->getKnowledge();
-            $this->dataset16[] = (float) $data->getSextontjugofyra();
-            $this->dataset25[] = (float) $data->getFjugofemtrettiofyra();
-            $this->dataset35[] = (float) $data->getTrettiofemfyrtiofyra();
-            $this->dataset45[] = (float) $data->getFyrtiofemfemtiofyra();
-            $this->dataset55[] = (float) $data->getFemtiofemsextiofyra();
-            $this->dataset65[] = (float) $data->getSextiofemsjutiofyra();
+        if ($repo != []) {
+            foreach ($repo as $data) {
+                $this->labels[] = $data->getKnowledge();
+                $this->dataset16[] = (float) $data->getSextontjugofyra();
+                $this->dataset25[] = (float) $data->getFjugofemtrettiofyra();
+                $this->dataset35[] = (float) $data->getTrettiofemfyrtiofyra();
+                $this->dataset45[] = (float) $data->getFyrtiofemfemtiofyra();
+                $this->dataset55[] = (float) $data->getFemtiofemsextiofyra();
+                $this->dataset65[] = (float) $data->getSextiofemsjutiofyra();
+            }
         }
     }
 
@@ -129,5 +131,53 @@ class ChartDk
     public function getLabels(): array
     {
         return $this->labels;
+    }
+
+    /**
+     * This function returns the dataset16 from the data
+     */
+    public function getDataset16(): array
+    {
+        return $this->dataset16;
+    }
+
+    /**
+     * This function returns the dataset25 from the data
+     */
+    public function getDataset25(): array
+    {
+        return $this->dataset25;
+    }
+
+    /**
+     * This function returns the dataset35 from the data
+     */
+    public function getDataset35(): array
+    {
+        return $this->dataset35;
+    }
+
+    /**
+     * This function returns the dataset45 from the data
+     */
+    public function getDataset45(): array
+    {
+        return $this->dataset45;
+    }
+
+    /**
+     * This function returns the dataset55 from the data
+     */
+    public function getDataset55(): array
+    {
+        return $this->dataset55;
+    }
+
+    /**
+     * This function returns the dataset65 from the data
+     */
+    public function getDataset65(): array
+    {
+        return $this->dataset65;
     }
 }

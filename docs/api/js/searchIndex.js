@@ -721,6 +721,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Controller-ProjectController.html#method_aboutProj"
         },                {
+            "fqsen": "\\App\\Controller\\ProjectController\u003A\u003AresetProj\u0028\u0029",
+            "name": "resetProj",
+            "summary": "",
+            "url": "classes/App-Controller-ProjectController.html#method_resetProj"
+        },                {
             "fqsen": "\\App\\Entity\\Book",
             "name": "Book",
             "summary": "",
@@ -1146,6 +1151,36 @@ Search.appendIndex(
             "summary": "This\u0020function\u0020returns\u0020the\u0020labels\u0020from\u0020the\u0020data",
             "url": "classes/App-Proj-ChartDk.html#method_getLabels"
         },                {
+            "fqsen": "\\App\\Proj\\ChartDk\u003A\u003AgetDataset16\u0028\u0029",
+            "name": "getDataset16",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset16\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartDk.html#method_getDataset16"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDk\u003A\u003AgetDataset25\u0028\u0029",
+            "name": "getDataset25",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset25\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartDk.html#method_getDataset25"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDk\u003A\u003AgetDataset35\u0028\u0029",
+            "name": "getDataset35",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset35\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartDk.html#method_getDataset35"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDk\u003A\u003AgetDataset45\u0028\u0029",
+            "name": "getDataset45",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset45\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartDk.html#method_getDataset45"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDk\u003A\u003AgetDataset55\u0028\u0029",
+            "name": "getDataset55",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset55\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartDk.html#method_getDataset55"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDk\u003A\u003AgetDataset65\u0028\u0029",
+            "name": "getDataset65",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset65\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartDk.html#method_getDataset65"
+        },                {
             "fqsen": "\\App\\Proj\\ChartDk\u003A\u003A\u0024labels",
             "name": "labels",
             "summary": "",
@@ -1196,6 +1231,21 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/App-Proj-ChartM1.html#method_setChart"
         },                {
+            "fqsen": "\\App\\Proj\\ChartM1\u003A\u003AgetLabels\u0028\u0029",
+            "name": "getLabels",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020labels\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartM1.html#method_getLabels"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM1\u003A\u003AgetDatasetsF\u0028\u0029",
+            "name": "getDatasetsF",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020datasetFlickor\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartM1.html#method_getDatasetsF"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM1\u003A\u003AgetDatasetsP\u0028\u0029",
+            "name": "getDatasetsP",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset25\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartM1.html#method_getDatasetsP"
+        },                {
             "fqsen": "\\App\\Proj\\ChartM1\u003A\u003A\u0024labels",
             "name": "labels",
             "summary": "",
@@ -1225,6 +1275,21 @@ Search.appendIndex(
             "name": "setChart",
             "summary": "",
             "url": "classes/App-Proj-ChartM2.html#method_setChart"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2\u003A\u003AgetLabels\u0028\u0029",
+            "name": "getLabels",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020labels\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartM2.html#method_getLabels"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2\u003A\u003AgetDatasetsF\u0028\u0029",
+            "name": "getDatasetsF",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020datasetFlickor\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartM2.html#method_getDatasetsF"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2\u003A\u003AgetDatasetsP\u0028\u0029",
+            "name": "getDatasetsP",
+            "summary": "This\u0020function\u0020returns\u0020the\u0020dataset25\u0020from\u0020the\u0020data",
+            "url": "classes/App-Proj-ChartM2.html#method_getDatasetsP"
         },                {
             "fqsen": "\\App\\Proj\\ChartM2\u003A\u003A\u0024labels",
             "name": "labels",
@@ -1340,6 +1405,66 @@ Search.appendIndex(
             "name": "remove",
             "summary": "",
             "url": "classes/App-Repository-ProductRepository.html#method_remove"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDkTest",
+            "name": "ChartDkTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020ChartDk.",
+            "url": "classes/App-Proj-ChartDkTest.html"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDkTest\u003A\u003AtestCreateChartDkObject\u0028\u0029",
+            "name": "testCreateChartDkObject",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020the\u0020object\u0020is\u0020of\u0020the\u0020expected\u0020class.",
+            "url": "classes/App-Proj-ChartDkTest.html#method_testCreateChartDkObject"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDkTest\u003A\u003AtestIfObjectHasLabels\u0028\u0029",
+            "name": "testIfObjectHasLabels",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020labels\u0020as\u0020array",
+            "url": "classes/App-Proj-ChartDkTest.html#method_testIfObjectHasLabels"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartDkTest\u003A\u003AtestIfObjectHasDatasets\u0028\u0029",
+            "name": "testIfObjectHasDatasets",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020datasets\u0020as\u0020array",
+            "url": "classes/App-Proj-ChartDkTest.html#method_testIfObjectHasDatasets"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM1Test",
+            "name": "ChartM1Test",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020ChartM1.",
+            "url": "classes/App-Proj-ChartM1Test.html"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM1Test\u003A\u003AtestCreateChartM1Object\u0028\u0029",
+            "name": "testCreateChartM1Object",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020the\u0020object\u0020is\u0020of\u0020the\u0020expected\u0020class.",
+            "url": "classes/App-Proj-ChartM1Test.html#method_testCreateChartM1Object"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM1Test\u003A\u003AtestIfObjectHasLabels\u0028\u0029",
+            "name": "testIfObjectHasLabels",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020labels\u0020as\u0020array",
+            "url": "classes/App-Proj-ChartM1Test.html#method_testIfObjectHasLabels"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM1Test\u003A\u003AtestIfObjectHasDatasets\u0028\u0029",
+            "name": "testIfObjectHasDatasets",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020labels\u0020as\u0020array",
+            "url": "classes/App-Proj-ChartM1Test.html#method_testIfObjectHasDatasets"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2Test",
+            "name": "ChartM2Test",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020ChartM2.",
+            "url": "classes/App-Proj-ChartM2Test.html"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2Test\u003A\u003AtestCreateChartM2Object\u0028\u0029",
+            "name": "testCreateChartM2Object",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020the\u0020object\u0020is\u0020of\u0020the\u0020expected\u0020class.",
+            "url": "classes/App-Proj-ChartM2Test.html#method_testCreateChartM2Object"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2Test\u003A\u003AtestIfObjectHasLabels\u0028\u0029",
+            "name": "testIfObjectHasLabels",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020labels\u0020as\u0020array",
+            "url": "classes/App-Proj-ChartM2Test.html#method_testIfObjectHasLabels"
+        },                {
+            "fqsen": "\\App\\Proj\\ChartM2Test\u003A\u003AtestIfObjectHasDatasets\u0028\u0029",
+            "name": "testIfObjectHasDatasets",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020labels\u0020as\u0020array",
+            "url": "classes/App-Proj-ChartM2Test.html#method_testIfObjectHasDatasets"
         },                {
             "fqsen": "\\",
             "name": "\\",

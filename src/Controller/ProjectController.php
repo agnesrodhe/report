@@ -14,6 +14,11 @@ use Symfony\UX\Chartjs\Model\Chart;
 use App\Proj\ChartM1;
 use App\Proj\ChartM2;
 use App\Proj\ChartDk;
+use Symfony\Bundle\FrameworkBundle\Console\Application;
+use Symfony\Component\Console\Input\ArrayInput;
+use Symfony\Component\Console\Output\BufferedOutput;
+use Symfony\Component\HttpKernel\KernelInterface;
+use Symfony\Component\Console\Output\NullOutput;
 
 class ProjectController extends AbstractController
 {
@@ -74,6 +79,20 @@ class ProjectController extends AbstractController
      */
     public function resetProj(): Response
     {
-        return $this->render('proj/aboutProj.html.twig');
+        // $application = new Application($kernel);
+        // $application->setAutoExit(false);
+
+        // $input = new ArrayInput([
+        //     'command' => 'cp',
+        //     // (optional) define the value of command arguments
+        //     'nextArgument' => 'var/data.backup',
+        //     // // (optional) pass options to the command
+        //     '--bar' => 'var/data.db',
+        // ]);
+
+        // $output = new NullOutput();
+        // $application->run($input, $output);
+        // return new Response("");
+        return $this->redirectToRoute('proj');
     }
 }

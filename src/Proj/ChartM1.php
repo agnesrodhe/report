@@ -31,7 +31,7 @@ class ChartM1
     /**
      * @param array $repo       The data as an array
      */
-    public function __construct($repo)
+    public function __construct($repo = [])
     {
         foreach ($repo as $data) {
             $this->labels[] = $data->getYear();
@@ -73,5 +73,29 @@ class ChartM1
                 ],
             ],
         ]);
+    }
+
+    /**
+     * This function returns the labels from the data
+     */
+    public function getLabels(): array
+    {
+        return $this->labels;
+    }
+
+    /**
+     * This function returns the datasetFlickor from the data
+     */
+    public function getDatasetsF(): array
+    {
+        return $this->datasetsF;
+    }
+
+    /**
+     * This function returns the dataset25 from the data
+     */
+    public function getDatasetsP(): array
+    {
+        return $this->datasetsP;
     }
 }
