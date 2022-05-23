@@ -18,7 +18,6 @@ use App\Entity\Mobbning1;
 use App\Proj\ResetDb;
 use Doctrine\Persistence\ManagerRegistry;
 
-
 class ProjectController extends AbstractController
 {
     /**
@@ -79,29 +78,28 @@ class ProjectController extends AbstractController
     public function resetProj(
         Mobbning1Repository $m1Repository,
         Mobbning2Repository $m2Repository,
-        DigitalKnowledgeRepository $DkRepository,
+        DigitalKnowledgeRepository $dkRepository,
         ManagerRegistry $doctrine,
-    ): Response
-    {
+    ): Response {
         $resetDb = new ResetDb();
         $entityManager = $doctrine->getManager();
         // reset Mobbning1
-        $m1 = $m1Repository
+        $m1Repo = $m1Repository
             ->findAll();
-        $resetDb->removeEntity($doctrine, $m1);
-        $resetDb->addCsvFileMobbning1($doctrine);
+        $resetDb->removeEntity($doctrine, $m1Repo);
+        $resetDb->addCsvFile($doctrine, '../var/mobbning1.csv');
 
         // reset Mobbning2
-        $m2 = $m2Repository
+        $m2Repo = $m2Repository
             ->findAll();
-        $resetDb->removeEntity($doctrine, $m2);
-        $resetDb->addCsvFileMobbning2($doctrine);
+        $resetDb->removeEntity($doctrine, $m2Repo);
+        $resetDb->addCsvFile($doctrine, '../var/mobbning2.csv');
 
         // reset DigitalKnowledge
-        $dK = $DkRepository
+        $dkRepo = $dkRepository
             ->findAll();
-        $resetDb->removeEntity($doctrine, $dK);
-        $resetDb->addCsvFileDigitalKnowledge($doctrine);
+        $resetDb->removeEntity($doctrine, $dkRepo);
+        $resetDb->addCsvFile($doctrine, '../var/digitalknowledge.csv');
         $entityManager->flush();
 
         return $this->redirectToRoute('proj');
