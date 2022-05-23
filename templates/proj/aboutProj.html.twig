@@ -1,24 +1,25 @@
 {% extends "proj/baseProj.html.twig" %}
 
 {% block content %}
-<h1>OM projekt</h1>
-<p>som berättar någorlunda utförligt om ditt projekt och vad det handlar om.</p>
+<div class="container">
+    <h1>Om projekt</h1>
+    <p>Mitt projekt handlar om det globala målet nummer 4 - God utbildning för alla. Jag har valt det eftersom jag tycker att det är en otroligt viktig och demokratisk rättighet, att alla ska ha rätt och god tillgång till en trygg och säker utbildning. Jag har valt att framställa det här genom att hämta data från <a href="https://www.scb.se/hitta-statistik/statistik-efter-amne/miljo/miljoekonomi-och-hallbar-utveckling/indikatorer-for-hallbar-utveckling/">SCBs hemsida</a>. Den data jag har valt ut handlar om mobbning samt om digitala färdigheter hos Sveriges befolkning. Datan har jag lagt i en databas och sedan har jag med hjälp av Chart.js framställt datan i diagram så att den ska kunna tas in på ett visuellt vis. Utöver detta har jag kompletterat med text och citat från olika källor.</p>
+    
+    <h2>Dokumentation</h2>
+    <p>
+        <a href="http://www.student.bth.se/~agro21/dbwebb-kurser/mvc/me/report/docs/api/">Länk till dokumentationen som är genererad via phpdoc</a>.</p>
+        <p><a href="http://www.student.bth.se/~agro21/dbwebb-kurser/mvc/me/report/docs/metrics/">Länk till rapporten från phpmetrics.</a></p>
+        <p><a href="https://github.com/agnesrodhe/report">Länk till ditt GitHub repo.</a></p>
+        <p><a href="https://scrutinizer-ci.com/g/agnesrodhe/report/">Länk till Scrutinizers sida.</a></p>
+        <p><a href="https://github.com/agnesrodhe/report/blob/main/README.md">Länk till Scrutinizer-badges på Github.</a></p>
+<div class="text">
+    <h2>Kodkvalitet</h2>
+    <p>Jag har i projektet valt att försöka fokusera på att funktionern/metoderna ska ha en egen uppgift. Jag har även utifrån min förmåga försökt skriva test för att få en god code coverage. Jag skulle säga att kodkvaliteten på projektet kan bli bättre men utifrån förutsättningarna att genomföra ett sådant här projekt under tidsramen är relativt bra.</p>
 
-<h2>Dokumentation</h2>
-<p>
-    <a href="../../docs/api/index.html">Länk till dokumentationen som är genererad via phpdoc</a>.</p>
-    <p>Länk till rapporten från phpmetrics.</p>
-    <p><a href="https://github.com/agnesrodhe/report">Länk till ditt GitHub repo.</a></p>
-    <p><a href="https://scrutinizer-ci.com/g/agnesrodhe/report/">Länk till Scrutinizers sida.</a></p>
-    <p><a href="https://github.com/agnesrodhe/report/blob/main/README.md">Länk till Scrutinizer-badges på Github.</a></p>
+    <p><a href="{{ url("reset-proj") }}">Länk till reset av databasen.</a></p>
+</div>
 
-<h2>Kodkvalitet</h2>
+</div>
 
-<p>Din about-sida skall innehålla en summering där du berättar om projektets kodkvalitet. Berätta vilka eventuella åtgärder du gjort för att kvalitetssäkra projektet och hur du jobbat med kodkvaliteten och vilka verktyg du använt. Har du fokuserat på några speciella saker, verktyg eller metrics, så kan du berätta om dem.</p>
-
-
-
-<p>Jag ska kolla på 4.a stress och mobbning</p>
-<p>4.4 utbildningsnivå</p>
 
 {% endblock %}

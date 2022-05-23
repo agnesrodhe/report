@@ -21,7 +21,7 @@ li {
     font-size: 15px;
 }
 
-.container {
+.container1 {
     display: grid;
     grid-template-columns: 15% 15% 15% 15% 15% 15% 15%;
     grid-template-rows: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
@@ -34,6 +34,11 @@ li {
     font-size: 45px;
     font-family:'Courier New', Courier, monospace;
 }
+
+.text {
+    min-height: 250px;
+}
+
 .underrubrik {
     grid-column: 4/5;
     grid-row: 2/3;

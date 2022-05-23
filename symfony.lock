@@ -92,6 +92,9 @@
     "league/config": {
         "version": "v1.1.1"
     },
+    "league/csv": {
+        "version": "9.8.0"
+    },
     "monolog/monolog": {
         "version": "2.4.0"
     },

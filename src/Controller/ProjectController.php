@@ -14,11 +14,10 @@ use Symfony\UX\Chartjs\Model\Chart;
 use App\Proj\ChartM1;
 use App\Proj\ChartM2;
 use App\Proj\ChartDk;
-use Symfony\Bundle\FrameworkBundle\Console\Application;
-use Symfony\Component\Console\Input\ArrayInput;
-use Symfony\Component\Console\Output\BufferedOutput;
-use Symfony\Component\HttpKernel\KernelInterface;
-use Symfony\Component\Console\Output\NullOutput;
+use App\Entity\Mobbning1;
+use App\Proj\ResetDb;
+use Doctrine\Persistence\ManagerRegistry;
+
 
 class ProjectController extends AbstractController
 {
@@ -77,22 +76,34 @@ class ProjectController extends AbstractController
     /**
      * @Route("/proj/reset", name="reset-proj")
      */
-    public function resetProj(): Response
+    public function resetProj(
+        Mobbning1Repository $m1Repository,
+        Mobbning2Repository $m2Repository,
+        DigitalKnowledgeRepository $DkRepository,
+        ManagerRegistry $doctrine,
+    ): Response
     {
-        // $application = new Application($kernel);
-        // $application->setAutoExit(false);
+        $resetDb = new ResetDb();
+        $entityManager = $doctrine->getManager();
+        // reset Mobbning1
+        $m1 = $m1Repository
+            ->findAll();
+        $resetDb->removeEntity($doctrine, $m1);
+        $resetDb->addCsvFileMobbning1($doctrine);
 
-        // $input = new ArrayInput([
-        //     'command' => 'cp',
-        //     // (optional) define the value of command arguments
-        //     'nextArgument' => 'var/data.backup',
-        //     // // (optional) pass options to the command
-        //     '--bar' => 'var/data.db',
-        // ]);
+        // reset Mobbning2
+        $m2 = $m2Repository
+            ->findAll();
+        $resetDb->removeEntity($doctrine, $m2);
+        $resetDb->addCsvFileMobbning2($doctrine);
 
-        // $output = new NullOutput();
-        // $application->run($input, $output);
-        // return new Response("");
+        // reset DigitalKnowledge
+        $dK = $DkRepository
+            ->findAll();
+        $resetDb->removeEntity($doctrine, $dK);
+        $resetDb->addCsvFileDigitalKnowledge($doctrine);
+        $entityManager->flush();
+
         return $this->redirectToRoute('proj');
     }
 }
