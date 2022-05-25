@@ -1498,17 +1498,17 @@ Search.appendIndex(
         },                {
             "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestIfDataIsSetToEntityMobbning1\u0028\u0029",
             "name": "testIfDataIsSetToEntityMobbning1",
-            "summary": "",
+            "summary": "Test\u0020if\u0020data\u0020is\u0020set\u0020to\u0020Mobbning1",
             "url": "classes/App-Proj-ResetDbTest.html#method_testIfDataIsSetToEntityMobbning1"
         },                {
             "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestIfDataIsSetToEntityMobbning2\u0028\u0029",
             "name": "testIfDataIsSetToEntityMobbning2",
-            "summary": "",
+            "summary": "Test\u0020if\u0020data\u0020is\u0020set\u0020to\u0020mobbning\u00202",
             "url": "classes/App-Proj-ResetDbTest.html#method_testIfDataIsSetToEntityMobbning2"
         },                {
             "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestIfDataIsSetToEntityDigitalKnowledge\u0028\u0029",
             "name": "testIfDataIsSetToEntityDigitalKnowledge",
-            "summary": "",
+            "summary": "Test\u0020if\u0020data\u0020is\u0020set\u0020to\u0020digital\u0020knowledge",
             "url": "classes/App-Proj-ResetDbTest.html#method_testIfDataIsSetToEntityDigitalKnowledge"
         },                {
             "fqsen": "\\",

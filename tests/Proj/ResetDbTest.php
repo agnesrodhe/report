@@ -21,6 +21,9 @@ class ResetDbTest extends TestCase
         $this->assertInstanceOf("\App\Proj\ResetDb", $resetDb);
     }
 
+    /**
+     * Test if data is set to Mobbning1
+     */
     public function testIfDataIsSetToEntityMobbning1()
     {
         $filePath = 'data/mobbning1.csv';
@@ -41,6 +44,9 @@ class ResetDbTest extends TestCase
         $this->assertEquals($entity->getFlickor(), "19,9");
     }
 
+    /**
+     * Test if data is set to mobbning 2
+     */
     public function testIfDataIsSetToEntityMobbning2()
     {
         $filePath = 'data/mobbning2.csv';
@@ -61,6 +67,9 @@ class ResetDbTest extends TestCase
         $this->assertEquals($entity->getFlickor(), "7,9");
     }
 
+    /**
+     * Test if data is set to digital knowledge
+     */
     public function testIfDataIsSetToEntityDigitalKnowledge()
     {
         $filePath = 'data/digitalknowledge.csv';
