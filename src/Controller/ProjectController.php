@@ -87,19 +87,19 @@ class ProjectController extends AbstractController
         $m1Repo = $m1Repository
             ->findAll();
         $resetDb->removeEntity($doctrine, $m1Repo);
-        $resetDb->addCsvFile($doctrine, '../var/mobbning1.csv');
+        $resetDb->addCsvFile($doctrine, '../data/mobbning1.csv');
 
         // reset Mobbning2
         $m2Repo = $m2Repository
             ->findAll();
         $resetDb->removeEntity($doctrine, $m2Repo);
-        $resetDb->addCsvFile($doctrine, '../var/mobbning2.csv');
+        $resetDb->addCsvFile($doctrine, '../data/mobbning2.csv');
 
         // reset DigitalKnowledge
         $dkRepo = $dkRepository
             ->findAll();
         $resetDb->removeEntity($doctrine, $dkRepo);
-        $resetDb->addCsvFile($doctrine, '../var/digitalknowledge.csv');
+        $resetDb->addCsvFile($doctrine, '../data/digitalknowledge.csv');
         $entityManager->flush();
 
         return $this->redirectToRoute('proj');

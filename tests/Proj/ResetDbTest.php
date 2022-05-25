@@ -21,7 +21,7 @@ class ResetDbTest extends TestCase
     }
 
     public function testIfDataIsSetToEntityMobbning1(){
-        $filePath = 'var/mobbning1.csv';
+        $filePath = 'data/mobbning1.csv';
         $resetDb = new ResetDb();
         $handle = fopen($filePath, "r");
         $row = 1;
@@ -39,7 +39,7 @@ class ResetDbTest extends TestCase
     }
 
     public function testIfDataIsSetToEntityMobbning2(){
-        $filePath = 'var/mobbning2.csv';
+        $filePath = 'data/mobbning2.csv';
         $resetDb = new ResetDb();
         $handle = fopen($filePath, "r");
         $row = 1;
@@ -57,7 +57,7 @@ class ResetDbTest extends TestCase
     }
 
     public function testIfDataIsSetToEntityDigitalKnowledge(){
-        $filePath = 'var/digitalknowledge.csv';
+        $filePath = 'data/digitalknowledge.csv';
         $resetDb = new ResetDb();
         $handle = fopen($filePath, "r");
         $row = 1;
