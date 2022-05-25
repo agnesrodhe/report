@@ -62,13 +62,6 @@ class DigitalKnowledge
         return $this->id;
     }
 
-    public function setId(string $id): self
-    {
-        $this->id = $id;
-
-        return $this;
-    }
-
     public function getKnowledge(): ?string
     {
         return $this->knowledge;

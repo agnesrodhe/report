@@ -20,7 +20,7 @@ class ResetDb
     /**
      * @param ManagerRegistry $doctrine
      * @param array $repo
-     * 
+     *
      * This function remove the data from an entity from the database
      */
     public function removeEntity(
@@ -35,14 +35,13 @@ class ResetDb
 
     /**
      * @param string $filePath
-     * 
+     *
      * This function add data to an entity
      */
     public function addData(
         string $filePath,
         $data
-    )
-    {
+    ) {
         if (str_contains($filePath, "mobbning1")) {
             $mo1 = new Mobbning1();
             $mo1->setYear($data[1]);
@@ -74,7 +73,7 @@ class ResetDb
     /**
      * @param ManagerRegistry $doctrine
      * @param string $filePath
-     * 
+     *
      * This function add data from csv-file to database
      */
     public function addCsvFile(
@@ -95,6 +94,6 @@ class ResetDb
             $entityManager->persist($entity);
         };
         fclose($handle);
-        return True;
+        return true;
     }
 }

@@ -6,6 +6,7 @@ use PHPUnit\Framework\TestCase;
 use Doctrine\Persistence\ManagerRegistry;
 use App\Entity\DigitalKnowledge;
 use App\Repository\DigitalKnowledgeRepository;
+
 /**
  * Test cases for class ResetDb.
  */
@@ -20,11 +21,13 @@ class ResetDbTest extends TestCase
         $this->assertInstanceOf("\App\Proj\ResetDb", $resetDb);
     }
 
-    public function testIfDataIsSetToEntityMobbning1(){
+    public function testIfDataIsSetToEntityMobbning1()
+    {
         $filePath = 'data/mobbning1.csv';
         $resetDb = new ResetDb();
         $handle = fopen($filePath, "r");
         $row = 1;
+        $entity;
         while (($data = fgetcsv($handle)) !== false) {
             if ($row == 1) {
                 $row++;
@@ -38,11 +41,13 @@ class ResetDbTest extends TestCase
         $this->assertEquals($entity->getFlickor(), "19,9");
     }
 
-    public function testIfDataIsSetToEntityMobbning2(){
+    public function testIfDataIsSetToEntityMobbning2()
+    {
         $filePath = 'data/mobbning2.csv';
         $resetDb = new ResetDb();
         $handle = fopen($filePath, "r");
         $row = 1;
+        $entity;
         while (($data = fgetcsv($handle)) !== false) {
             if ($row == 1) {
                 $row++;
@@ -56,11 +61,13 @@ class ResetDbTest extends TestCase
         $this->assertEquals($entity->getFlickor(), "7,9");
     }
 
-    public function testIfDataIsSetToEntityDigitalKnowledge(){
+    public function testIfDataIsSetToEntityDigitalKnowledge()
+    {
         $filePath = 'data/digitalknowledge.csv';
         $resetDb = new ResetDb();
         $handle = fopen($filePath, "r");
         $row = 1;
+        $entity;
         while (($data = fgetcsv($handle)) !== false) {
             if ($row == 1) {
                 $row++;
@@ -73,5 +80,4 @@ class ResetDbTest extends TestCase
         $this->assertInstanceOf("\App\Entity\DigitalKnowledge", $entity);
         $this->assertEquals($entity->getYear(), "2017");
     }
-    
 }

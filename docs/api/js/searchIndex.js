@@ -1466,6 +1466,51 @@ Search.appendIndex(
             "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020it\u0020returns\u0020labels\u0020as\u0020array",
             "url": "classes/App-Proj-ChartM2Test.html#method_testIfObjectHasDatasets"
         },                {
+            "fqsen": "\\App\\Proj\\ResetDb",
+            "name": "ResetDb",
+            "summary": "The\u0020class\u0020ResetDb\u0020contains\u0020functions\u0020to\u0020reset\u0020database",
+            "url": "classes/App-Proj-ResetDb.html"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDb\u003A\u003AremoveEntity\u0028\u0029",
+            "name": "removeEntity",
+            "summary": "",
+            "url": "classes/App-Proj-ResetDb.html#method_removeEntity"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDb\u003A\u003AaddData\u0028\u0029",
+            "name": "addData",
+            "summary": "",
+            "url": "classes/App-Proj-ResetDb.html#method_addData"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDb\u003A\u003AaddCsvFile\u0028\u0029",
+            "name": "addCsvFile",
+            "summary": "",
+            "url": "classes/App-Proj-ResetDb.html#method_addCsvFile"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDbTest",
+            "name": "ResetDbTest",
+            "summary": "Test\u0020cases\u0020for\u0020class\u0020ResetDb.",
+            "url": "classes/App-Proj-ResetDbTest.html"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestCreateResetDbObject\u0028\u0029",
+            "name": "testCreateResetDbObject",
+            "summary": "Create\u0020an\u0020object\u0020and\u0020check\u0020that\u0020the\u0020object\u0020is\u0020of\u0020the\u0020expected\u0020class.",
+            "url": "classes/App-Proj-ResetDbTest.html#method_testCreateResetDbObject"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestIfDataIsSetToEntityMobbning1\u0028\u0029",
+            "name": "testIfDataIsSetToEntityMobbning1",
+            "summary": "",
+            "url": "classes/App-Proj-ResetDbTest.html#method_testIfDataIsSetToEntityMobbning1"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestIfDataIsSetToEntityMobbning2\u0028\u0029",
+            "name": "testIfDataIsSetToEntityMobbning2",
+            "summary": "",
+            "url": "classes/App-Proj-ResetDbTest.html#method_testIfDataIsSetToEntityMobbning2"
+        },                {
+            "fqsen": "\\App\\Proj\\ResetDbTest\u003A\u003AtestIfDataIsSetToEntityDigitalKnowledge\u0028\u0029",
+            "name": "testIfDataIsSetToEntityDigitalKnowledge",
+            "summary": "",
+            "url": "classes/App-Proj-ResetDbTest.html#method_testIfDataIsSetToEntityDigitalKnowledge"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
