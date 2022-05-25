@@ -17,6 +17,12 @@ use App\Entity\DigitalKnowledge;
  */
 class ResetDb
 {
+    /**
+     * @param ManagerRegistry $doctrine
+     * @param array $repo
+     * 
+     * This function remove the data from an entity from the database
+     */
     public function removeEntity(
         ManagerRegistry $doctrine,
         array $repo
@@ -27,6 +33,11 @@ class ResetDb
         };
     }
 
+    /**
+     * @param string $filePath
+     * 
+     * This function add data to an entity
+     */
     public function addData(
         string $filePath,
         $data
@@ -60,6 +71,12 @@ class ResetDb
         }
     }
 
+    /**
+     * @param ManagerRegistry $doctrine
+     * @param string $filePath
+     * 
+     * This function add data from csv-file to database
+     */
     public function addCsvFile(
         ManagerRegistry $doctrine,
         string $filePath
@@ -78,79 +95,6 @@ class ResetDb
             $entityManager->persist($entity);
         };
         fclose($handle);
+        return True;
     }
-
-    // public function addCsvFileMobbning1(
-    //     ManagerRegistry $doctrine,
-    //     $entity
-    // ) {
-    //     $entityManager = $doctrine->getManager();
-    //     $path = '../var/mobbning1.csv';
-    //     $handle = fopen($path, "r");
-    //     $row = 1;
-    //     while (($data = fgetcsv($handle)) !== false) {
-    //         if ($row == 1) {
-    //             $row++;
-    //             continue;
-    //         };
-    //         $row++;
-
-    //         $entity->setYear($data[1]);
-    //         $entity->setFlickor($data[2]);
-    //         $entity->setPojkar($data[3]);
-    //         $entity->setTotalt($data[4]);
-    //         $entityManager->persist($entity);
-    //     };
-    //     fclose($handle);
-    // }
-
-    // public function addCsvFileMobbning2(
-    //     ManagerRegistry $doctrine
-    // ) {
-    //     $entityManager = $doctrine->getManager();
-    //     $path = '../var/mobbning2.csv';
-    //     $handle = fopen($path, "r");
-    //     $row = 1;
-    //     while (($data = fgetcsv($handle)) !== false) {
-    //         if ($row == 1) {
-    //             $row++;
-    //             continue;
-    //         };
-    //         $row++;
-    //         $mo2 = new Mobbning2();
-    //         $mo2->setYear($data[1]);
-    //         $mo2->setFlickor($data[2]);
-    //         $mo2->setPojkar($data[3]);
-    //         $mo2->setTotalt($data[4]);
-    //         $entityManager->persist($mo2);
-    //     };
-    //     fclose($handle);
-    // }
-
-    // public function addCsvFileDigitalKnowledge(
-    //     ManagerRegistry $doctrine
-    // ) {
-    //     $entityManager = $doctrine->getManager();
-    //     $path = '../var/digitalknowledge.csv';
-    //     $handle = fopen($path, "r");
-    //     $row = 1;
-    //     while (($data = fgetcsv($handle)) !== false) {
-    //         if ($row == 1) {
-    //             $row++;
-    //             continue;
-    //         };
-    //         $row++;
-    //         $digitalK = new DigitalKnowledge();
-    //         $digitalK->setKnowledge($data[1]);
-    //         $digitalK->setYear($data[2]);
-    //         $digitalK->setSextontjugofyra($data[3]);
-    //         $digitalK->setFjugofemtrettiofyra($data[4]);
-    //         $digitalK->setTrettiofemfyrtiofyra($data[5]);
-    //         $digitalK->setFyrtiofemfemtiofyra($data[6]);
-    //         $digitalK->setFemtiofemsextiofyra($data[7]);
-    //         $digitalK->setSextiofemsjutiofyra($data[8]);
-    //         $entityManager->persist($digitalK);
-    //     };
-    //     fclose($handle);
-    // }
 }
